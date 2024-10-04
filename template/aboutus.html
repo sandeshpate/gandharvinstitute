@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fontawesome.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/static/style-min.css"> -->
+  <link rel="stylesheet" href="../static/css/card.css">
+  <link rel="stylesheet" href="../static/css/about.css">
+  
+
+
+ 
+ 
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px rgb(144,118,236) !important;
+  
+  }
+  .buddy{
+    cursor: pointer;
+  }
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144,118,236);
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+#scrollToTopButton:hover,i:hover {
+    background-color: white;
+    color: rgb(144,118,236);
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+#navbarNav.nav-item.nav-link a:hover{
+  color: rgb(144,118,236);
+}
+.nav-link:hover{
+  color: rgb(144,118,236);
+}
+.nav-item :hover{
+  margin-bottom: 10px;
+  
+  
+}
+
+#header-nav .navbar-nav .nav-item .nav-link:hover {
+  color: rgb(144,118,236);
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition effect */
+  text-shadow: 0 0 10px rgb(144,118,236); /* Add glowing effect */
+}
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+  
+</script>
+
+
+<body>
+    
+
+
+  <div class="scroll-bar">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="../static/posters/Gandharva (1) new.png" alt="" width="300px"
+            height="400px"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#8b1500" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active s" aria-current="page" href="home.html"
+                onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="movies.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">aboutus</a>
+            </li>
+            <!--<li class="nav-item">
+            </li>-->
+            <li class="nav-item">
+              <!-- Genre dropdown starts -->
+              <div>
+                  <div class="dropdown" style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+                      <a class="nav-link" href="#" onMouseOver="this.style.color='rgb(144,118,236)'" onMouseOut="this.style.color='rgb(144,118,236)'">Course</a>
+                      <div class="dropdown-content" style="color:#fff; ">
+                          {% for drop in aboutdropdowns %}
+                              <a href=" drop.url ">{{ drop.name }}</a>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+              <!-- Genre dropdown ends -->
+          </li>
+             
+            
+
+            
+             
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tv.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">bookmyshow</a>
+            </li>
+           
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='rgbrgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">ContactUs</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+              <li>
+                <button  type="button" class="btn btn-light"  id="btn-logo"
+                  onclick="logout()" onMouseOver="this.style.color='black'"
+                  onMouseOut="this.style.color='white'">login</button>
+              </li>
+            </div>
+          </ul>
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" id="btn-logo" type="submit">Search</button>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar ends -->
+   
+       
+
+<!--slider-->
+        <main>
+          <div class="empty-div"></div>
+          <!--Slider-->
+          <div id="slider-id">
+            {% for image in slider_images %}
+            <div class="slide">
+                <div class="look-book">
+                    <img class="slider-img-id" src="{{ image.image.url}}" alt="{{ image.alt_text }}" height="500px" width="500px" />
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="slide">
+             <div class="look-book"> <img class="slider-img-id" src="../static/posters/abt us slider t1.avif" height="500px" width="500px" /> </div>
+                    </div> -->
+      
+            <!-- <div class="slide">
+             <div  class="look-book"> <img class="slider-img-id" src="../static/posters/abt us slider-2.webp" height="500px " width="500px" /></div>
+            </div> -->
+      
+            <!-- <div class="slide">
+            <div  class="look-book">  <img class="slider-img-id" src="../static/posters/abt us slider-3.avif" height="500px" width="500px" /></div>
+            </div> -->
+      
+            <!-- <div class="slide">
+            <div  class="look-book"><img class="slider-img-id" src="../static/posters/abt us slider t4.webp" height="500px" width="500px" /></div>
+            </div> -->
+      
+            <!--Controlling arrows-->
+            <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </span>
+      
+            <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right"
+                aria-hidden="true"></i>
+            </span>
+          </div>
+         
+          <div id="dots-con">
+             {% for image in slider_images %}
+              <span class="dot"></span>
+        
+        {% endfor %}
+            <!-- <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span> -->
+          </div>
+      
+      
+          <div class="container">
+            <div class="photo-container">
+              <div id="slidy-container">
+                <figure id="slidy">
+                  {% for item in  slider_one_images%}
+                  <img class="img-call" src="{{ item.img.url }}" alt="{{ item.text }}">
+              {% endfor %}
+                 
+                  <!-- <img class="img-call" src="../static/posters/abt-42-1.jpeg" alt="eyes">
+                  <img class="img-call" src="../static/posters/abt-42-2.jpg" alt="lou">
+                  <img class="img-call" src="../static/posters/abt-42-3.jpeg" alt="lucie-2">
+                  <img class="img-call" src="../static/posters/abt-42-4.jpg" alt="lucie">
+                  <img class="img-call" src="../static/posters/abt-41-5.jpg" alt="lucie"> -->
+                </figure>
+              </div>
+            </div>
+            <div class="about-us-container">
+              <div class="about-us-head">
+                <h6 class="question">What is Gandharv Natyasanskaar</h6>
+              </div>
+              <div class="abous-us-info">
+               
+                <div class="para">
+                  {% for item in  slider_one_images %}
+                <p>{{ item.desc }}</p>
+            {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+      
+          <div class="container">
+            
+            <div class="photo-container">
+              <div id="slidy-container">
+                <figure id="slidy">
+                  {% for item in slider_two_images %}
+                  <img class="img-call" src="{{ item.img.url }}" alt="{{ item.text }}">
+              {% endfor %}
+                 
+                  <!-- <img class="img-call" src="../static/posters/abt-41-1.webp" alt="eyes">
+                  <img class="img-call" src="../static/posters/abt-41-2.jpg" alt="lou">
+                  <img class="img-call" src="../static/posters/abt-41-3.jpg" alt="lucie-2">
+                  <img class="img-call" src="../static/posters/abt-41-4.jpg" alt="lucie">
+                  <img class="img-call" src="../static/posters/abt-42-5.jpg" alt="lucie"> -->
+                </figure>
+              </div>
+            </div>
+            <div class="about-us-container">
+              <div class="about-us-head">
+                <h6 class="question">Why to choose Gandharv Natyasanskaar</h6>
+              </div>
+              <div class="abous-us-info">
+                <ul class="para">
+                  {% for item in slider_two_images %}
+                  <p>{{ item.desc }}</p>
+               
+
+              {% endfor %}
+              
+                  <!-- <li>Gandharva Natyasanskaar offers all sorts of art learning such as
+                    Singing, Acting, Dance, Costume designing, and more.</li>
+                  <li>Specialized Tutors with over 3 years of experience.</li>
+                  <li>Over 200 Skilledfully passed out students. </li>
+                  <li>Free goodies worth Rs. 1000. </li>
+                  <li>Convenient and easy online & offline process. </li>
+                  <li>One of the most eligible institute in the maharashtra. </li>
+                  <li>Our institutes also provides a chance to work with the best production houses.</li>
+                  <li>Our institute takes part in various famous compitions. </li> -->
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+      
+          <section id="team">
+            <h1 class="heading-co">
+              <section>
+                <div class="teams">
+                  <h1 class="toggle">meet our team</h1>
+                </div>
+              </section>
+            </h1>
+      
+            <div class="container-co">
+              {% for member in team_members %}
+              <div class="box-co">
+                  <div class="top-bar"></div>
+                  <div class="nav-co">
+                      {% if member.verified %}
+                      <i class="verify fas fa-check-circle"></i>
+                      {% endif %}
+                      <input type="checkbox" class="heart-btn" id="heart-btn" />
+                      <label class="heart"></label>
+                  </div>
+      
+                  <div class="details">
+                      <img src="{{ member.profile_image.url }}" alt="" />
+                      <strong>{{ member.name }}</strong>
+                      <p>{{ member.department }}</p>
+                      <p class="mail">{{ member.email }}</p>
+                      <a href="#" class="btn-need">contact us</a>
+                  </div>
+      
+                  <div class="btn-co">
+                      {% if member.facebook_url %}
+                      <a href="{{ member.facebook_url }}"><i class="fab fa-facebook-f"></i></a>
+                      {% endif %}
+                      {% if member.twitter_url %}
+                      <a href="{{ member.twitter_url }}"><i class="fab fa-twitter"></i></a>
+                      {% endif %}
+                      {% if member.instagram_url %}
+                      <a href="{{ member.instagram_url }}"><i class="fab fa-instagram"></i></a>
+                      {% endif %}
+                      {% if member.youtube_url %}
+                      <a href="{{ member.youtube_url }}"><i class="fab fa-youtube"></i></a>
+                      {% endif %}
+                  </div>
+              </div>
+              {% endfor %}
+              </div>
+         
+              <!-- <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-1.webp" alt="" />
+                  <strong>Tanmay Raut</strong>
+                  <p>Head of Singing Department</p>
+                  <p class="mail">tanmay45@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div> -->
+              <!-- </div> -->
+              <!-- <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-5.webp" alt="" />
+                  <strong>Prajkta Kambli</strong>
+                  <p>
+                   Head of Dance Department
+                  </p>
+                  <p class="mail">Prajktakambli67@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile2.webp" alt="" />
+                  <strong>Rohan Jangle</strong>
+                  <p>Head of Acting Department</p>
+                  <p class="mail">Rohanjagle78@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+      
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-6.webp" alt="" />
+                  <strong>Alfa Shaikh</strong>
+                  <p>Head of Costume Designing department</p>
+                  <p class="mail">Alfashaikh96@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile 3.webp" alt="" />
+                  <strong>Satyam Gawali</strong>
+                  <p>Head of Film Making Department</p>
+                  <p class="mail">GawaliSatyam34@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+      
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-7.avif" alt="" />
+                  <strong>Kirti Gawant</strong>
+                  <p>Head of Set & Property Department</p>
+                  <p class="mail">Kirtigawant49@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-4.webp" alt="" />
+                  <strong>Vaibhav Mote</strong>
+                  <p>Head of Institute</p>
+                  <p class="mail">VaibhavMote96@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="box-co">
+                <div class="top-bar"></div>
+                <div class="nav-co">
+                  <i class="verify fas fa-check-circle"></i>
+                  <input type="checkbox" class="heart-btn" id="heart-btn" />
+                  <label class="heart"></label>
+                </div>
+      
+                <div class="details">
+                  <img src="../static/posters/profile-8.avif" alt="" />
+                  <strong>Shurti Neve</strong>
+                  <p>Head of Institute</p>
+                  <p class="mail">Shurtineve34@gmail.com</p>
+                  <a href="#" class="btn-need">contact us</a>
+                </div>
+      
+                <div class="btn-co">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div> -->
+           
+          </section>
+        </main>
+
+
+  
+  
+
+         
+
+
+
+ <!-------------------------------Footer-------------------------------->
+ <footer class="footer">
+  <hr class="footer-hr">
+  <div class="footer-content">
+    <div class="footer-left">
+      <a href="home.html"><img class="footer-logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30" height="24"></a>
+      <p class="footer-bottom-tagline"></p>
+    </div>
+    <div class="footer-middle">
+      <h2 class="footer-heading">Follow Us</h2>
+      <ul class="footer-middle-list icons">
+        <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+            class="fab fa-facebook-f facebook" style="color:rgb(144,118,236)"></i></a>
+        <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+            class="fab fa-twitter twitter" style="color:rgb(144,118,236)"></i></a>
+        <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+            class="fab fa-linkedin linkedin" style="color:rgb(144,118,236)"></i></a>
+        <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+            class="fab fa-instagram instagram" style="color:rgb(144,118,236)"></i></a>
+        <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website"
+          target="_blank"><i class="fab fa-github github" style="color:rgb(144,118,236)"></i></a>
+      </ul>
+    </div>
+    <div class="footer-middle">
+      <h2 class="footer-heading">course</h2>
+      <ul class="footer-middle-list">
+        <li class="footer-middle-list-item"><a href="home.html">Acting Course</a> </li>
+        <li class="footer-middle-list-item"><a href="web-series.html">Singing Course</a> </li>
+        <li class="footer-middle-list-item"><a href="kids.html">Dance Course</a> </li>
+        <li class="footer-middle-list-item"><a href="news.html">Flimmaking Course</a> </li>
+        <li class="footer-middle-list-item"><a href="premium.html">Costume Desiging</a> </li>
+        <li class="footer-middle-list-item"><a href="faq.html">Set And Property Designing</a> </li>
+      </ul>
+    </div>
+    <div class="footer-middle">
+      <h2 class="footer-heading">QUICK LINKS</h2>
+      <ul class="footer-middle-list">
+        <li class="footer-middle-list-item"><a href="home.html">Home</a> </li>
+        <li class="footer-middle-list-item"><a href="web-series.html">aboutus</a> </li>
+        <li class="footer-middle-list-item"><a href="kids.html">course</a> </li>
+        <li class="footer-middle-list-item"><a href="news.html">plays</a> </li>
+        <li class="footer-middle-list-item"><a href="premium.html">Contact Us</a> </li>
+        <li class="footer-middle-list-item"><a href="faq.html">Log In</a> </li>
+      </ul>
+    </div>
+    <div class="footer-middle">
+      <h2 class="footer-heading">Try Our App</h2>
+      <ul class="footer-middle-list icons">
+        <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:rgb(144,118,236)"></i></a>
+        <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color: rgb(144,118,236)"></i></a>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <p class="footer-links">
+      <h2 class="footer-heading">Contact Us</h2>
+      <p class="footer-bottom-tagline"></p>
+      <a class="footer-contact-button" href="contactus.html">Contact</a>
+      </p>
+    </div>
+  </div>
+  <!-- <hr class="footer-hr">
+  <div class="footer-copyright">
+    <p>Copyright &copy; and &reg; Since
+      <script>
+        document.write(new Date().getFullYear())
+      </script> Under ApnaTheatre.com :
+    </p> -->
+  </div>
+</footer>
+
+
+    <!----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+
+        $("#scrollToTopButton").click(function () {
+          $('html ,body').animate({ scrollTop: 0 }, 800)
+        });
+      });
+    </script>
+
+    <!-- footer scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="js/main-min.js"></script> -->
+ 
+    
+
+
+    <script>
+      jQuery('#waterdrop').raindrops({
+        color: '#292c2f',
+        canvasHeight: 150,
+        density: 0.1,
+        frequency: 20
+      });
+    </script>
+    <script>
+      function logout(){
+        window.location.replace("login.html");
+      }
+      </script>
+    <!-- bootsstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>  
+    <script src="../static/js/us.js"></script> 
+
+    </body>
+</html>
+        

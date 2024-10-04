@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fontawesome.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/sing.css">
+
+
+  
+  <!-- Import icons -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' async>
+  
+
+
+
+ 
+ 
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px red !important;
+  
+  }
+  .buddy{
+    cursor: pointer;
+  }
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144,118,236);
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+#scrollToTopButton:hover,i:hover {
+    background-color: white;
+    color: rgb(144,118,236);
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+#navbarNav.nav-item.nav-link a:hover{
+  color: rgb(144,118,236);
+}
+.nav-link:hover{
+  color: rgb(144,118,236);
+}
+.nav-item :hover{
+  margin-bottom: 10px;
+  
+  
+}
+
+#header-nav .navbar-nav .nav-item .nav-link:hover {
+  color: rgb(144,118,236);
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition effect */
+  text-shadow: 0 0 10px rgb(144,118,236); /* Add glowing effect */
+}
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+  
+</script>
+
+
+<body>
+    
+
+
+<div class="scroll-bar">
+    <!-- navbar starts -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30"
+            height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#8b1500" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active s" aria-current="page" href="home.html"
+                onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="movies.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">aboutus</a>
+            </li>
+            <!--<li class="nav-item">
+            </li>-->
+            <li>
+              <li class="nav-item">
+              <!-- Genre dropdown starts-->
+              <div>
+                <div class="dropdown"
+                  style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px;">
+                  <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                    onMouseOut="this.style.color='rgb(144,118,236)'">course</a>
+                  <!--<button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                                    Genres
+                                </button>-->
+                  <div class="dropdown-content" style="color:#fff">
+                    <a href="popular.html">singing course</a>
+                    <a href="crime.html">acting course</a>
+                    <a href="suspense.html">dance course</a>
+                    <a href="action.html">flimaking course </a>
+                    <a href="fantasy.html">costume desiging</a>
+                    <a href="documentary.html">set and property desiging</a>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Genre dropdown ends-->
+            </li>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tv.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">bookmyshow</a>
+            </li>
+           
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='rgbrgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">ContactUs</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+              <li>
+                <button  type="button" class="btn btn-light"
+                  onclick="logout()" onMouseOver="this.style.color='black'"
+                  onMouseOut="this.style.color='white'">login</button>
+              </li>
+            </div>
+          </ul>
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" style="background-color: rgb(144,118,236);" type="submit">Search</button>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+        <!-- navbar ends -->
+        <!-- <marquee>Welcome To <i>ApnaTheatre</i>.com<sup>&reg;</sup></marquee> -->
+
+       
+
+            
+    
+   
+
+
+    
+     
+        <!-- <div class="login">
+            <div class="login__content">
+                <div class="login__img"> -->
+                    <!-- <img src="/django/gandharvinstitute/static/posters/photos2-4.0.jpg" alt="Pessoa sentada utilizando o celular" > -->
+                <!-- </div>
+    
+                <div class="login__forms">
+                    
+                   
+                    <form action="{% url 'login' %}" class="login__create none" id="login-up" method="post">
+                      {% csrf_token %}
+                        <h1 class="login__title">Create Account</h1>
+    
+                        <div class="label__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <label class="login__label" for="login__input">Username</label>
+                        </div>
+                        <div class="login__box">
+                            <input type="text" placeholder="Enter username" class="login__input" name="username">
+                        </div>
+    
+                        <div class="label__box">
+                            <i class='bx bx-at login__icon'></i>
+                            <label class="login__label" for="login__input">Email</label>
+                        </div>
+                        <div class="login__box">
+                            <input type="text" placeholder="Enter email" class="login__input" name="email">
+                        </div>
+    
+                        <div class="label__box">
+                            <i class='bx bx-lock login__icon'></i>
+                            <label class="login__label" for="login__input">Password</label>
+                        </div>
+                        <div class="login__box">
+                            <input type="password" placeholder="Enter password" class="login__input" name="password">
+                        </div> -->
+                        <!-- <div class="label__box">
+                          <i class='bx bx-lock login__icon'></i>
+                          <label class="login__label" for="login__input">Confirmation Password</label>
+                      </div>
+                      <div class="login__box">
+                          <input type="password" placeholder="Enter password" class="login__input">
+                      </div>
+                        -->
+    
+                        <!-- <button type="submit" class="btn1"> Sing up</button>
+    
+                        <div>
+                            <span class="login__account">Already have an Account?</span>
+                            <a href="/login"> <span class="login__signup" id="sign-in">Sign In</span></a>
+                        </div>
+    
+                        <div class="login__social">
+                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+         -->
+
+       
+ 
+        
+          <script>
+   
+    function hideMessage() {
+        const messageBox = document.getElementById('message-box');
+        if (messageBox) {
+          messageBox.style.display = 'none';
+        }
+      }
+    
+      // Auto-hide message after 1 minute
+      const timeoutId = setTimeout(hideMessage, 60000); // 1 minute = 60000 milliseconds
+    
+      // Add click event listener to the close button
+      const closeButton = document.querySelector('.close-btn');
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          clearTimeout(timeoutId); // Clear the timeout if the user clicks the close button
+          hideMessage(); // Call hideMessage to hide the box
+        });
+      }
+</script>
+        
+<!-- <style> -->
+  
+<!-- .messages-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 80%;
+    max-width: 500px;
+}
+
+.message-box {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+} -->
+
+<!-- /* Message types (success, error, warning) */
+.message-box.success {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.message-box.error {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.message-box.warning {
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Animation for the message to slide in */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} -->
+
+
+<!-- </style> -->
+
+<style>
+  /* Message styling */
+#message-box {
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Position from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 90%; /* Width of the message box */
+  max-width: 400px; /* Max width */
+  z-index: 1000;
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex; /* Use flex to align icon and text */
+  align-items: center; /* Center items vertically */
+  background-color: #ff6b6b; /* Error background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative; /* For positioning the close button */
+}
+
+.close-btn {
+  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Positioning for the close button */
+  right: 10px; /* Right padding */
+  top: 10px; /* Top padding */
+  font-size: 20px; /* Size of the close icon */
+  color: #fff; /* Color of the close icon */
+}
+
+/* Additional styling for the icon */
+.alert i {
+  margin-right: 10px; /* Space between icon and message */
+  font-size: 20px; /* Size of the icon */
+}
+
+</style>
+         <div class="login">
+          <!-- {% if messages %}
+          <div class="messages-container">
+              {% for message in messages %}
+                  <div class="message-box {% if message.tags %} {{ message.tags }} {% endif %}">
+                      <p>{{ message }}</p>
+                      Close button (X) -->
+                      <!-- <span class="close-btn">&times;</span>
+                  </div>
+              {% endfor %}
+          </div>
+      {% endif %} -->
+
+      {% if messages %}
+      <div id="message-box">
+        {% for message in messages %}
+          <div class="alert error">
+            <span class="close-btn" onclick="hideMessage()">✖</span>
+            <i class='bx bx-error-circle'></i> 
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+          <div class="login__content">
+              <div class="login__img">
+                  <!-- <img src="/django/gandharvinstitute/static/posters/photos2-4.0.jpg" alt="Pessoa sentada utilizando o celular" > -->
+              </div>
+      
+              <div class="login__forms">
+             
+
+                  <form action="{% url 'sing' %}" class="login__create none" id="login-up" method="post">
+                      {% csrf_token %}
+                      <h1 class="login__title">Create Account</h1>
+      
+                      <div class="label__box">
+                          <i class='bx bx-user login__icon'></i>
+                          <label class="login__label" for="login__input">Username</label>
+                      </div>
+                      <div class="login__box">
+                          <input type="text" placeholder="Enter username" class="login__input" name="username">
+                      </div>
+      
+                      <div class="label__box">
+                          <i class='bx bx-at login__icon'></i>
+                          <label class="login__label" for="login__input">Email</label>
+                      </div>
+                      <div class="login__box">
+                          <input type="text" placeholder="Enter email" class="login__input" name="email">
+                      </div>
+      
+                      <div class="label__box">
+                          <i class='bx bx-lock login__icon'></i>
+                          <label class="login__label" for="login__input">Password</label>
+                      </div>
+                      <div class="login__box">
+                          <input type="password" placeholder="Enter password" class="login__input" name="password">
+                      </div>
+      
+                      <button type="submit" class="btn1">Sign up</button>
+      
+                      <div>
+                          <span class="login__account">Already have an Account?</span>
+                          <a href="/login"> <span class="login__signup" id="sign-in">Sign In</span></a>
+                      </div>
+      
+                      <div class="login__social">
+                          <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>
+                          <a href="#" class="login__social-icon"><i class='bx bxl-twitter'></i></a>
+                          <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+             
+  
+  
+
+         
+
+
+
+
+
+       <!-------------------------------Footer-------------------------------->
+       <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+          <div class="footer-left">
+            <a href="home.html"><img class="footer-logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30" height="24"></a>
+            <p class="footer-bottom-tagline"></p>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Follow Us</h2>
+            <ul class="footer-middle-list icons">
+              <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                  class="fab fa-facebook-f facebook" style="color:rgb(144,118,236)"></i></a>
+              <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                  class="fab fa-twitter twitter" style="color:rgb(144,118,236)"></i></a>
+              <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                  class="fab fa-linkedin linkedin" style="color:rgb(144,118,236)"></i></a>
+              <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                  class="fab fa-instagram instagram" style="color:rgb(144,118,236)"></i></a>
+              <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website"
+                target="_blank"><i class="fab fa-github github" style="color:rgb(144,118,236)"></i></a>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">course</h2>
+            <ul class="footer-middle-list">
+              <li class="footer-middle-list-item"><a href="home.html">Acting Course</a> </li>
+              <li class="footer-middle-list-item"><a href="web-series.html">Singing Course</a> </li>
+              <li class="footer-middle-list-item"><a href="kids.html">Dance Course</a> </li>
+              <li class="footer-middle-list-item"><a href="news.html">Flimmaking Course</a> </li>
+              <li class="footer-middle-list-item"><a href="premium.html">Costume Desiging</a> </li>
+              <li class="footer-middle-list-item"><a href="faq.html">Set And Property Designing</a> </li>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">QUICK LINKS</h2>
+            <ul class="footer-middle-list">
+              <li class="footer-middle-list-item"><a href="home.html">Home</a> </li>
+              <li class="footer-middle-list-item"><a href="web-series.html">aboutus</a> </li>
+              <li class="footer-middle-list-item"><a href="kids.html">course</a> </li>
+              <li class="footer-middle-list-item"><a href="news.html">plays</a> </li>
+              <li class="footer-middle-list-item"><a href="premium.html">Contact Us</a> </li>
+              <li class="footer-middle-list-item"><a href="faq.html">Log In</a> </li>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Try Our App</h2>
+            <ul class="footer-middle-list icons">
+              <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:rgb(144,118,236)"></i></a>
+              <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color: rgb(144,118,236)"></i></a>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p class="footer-links">
+            <h2 class="footer-heading">Contact Us</h2>
+            <p class="footer-bottom-tagline"></p>
+            <a class="footer-contact-button" href="contactus.html">Contact</a>
+            </p>
+          </div>
+        </div>
+        <!-- <hr class="footer-hr">
+        <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Under ApnaTheatre.com :
+          </p> -->
+        </div>
+      </footer>
+
+    <!----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+
+        $("#scrollToTopButton").click(function () {
+          $('html ,body').animate({ scrollTop: 0 }, 800)
+        });
+      });
+    </script>
+
+    <!-- footer scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    
+
+    <script>
+      jQuery('#waterdrop').raindrops({
+        color: '#292c2f',
+        canvasHeight: 150,
+        density: 0.1,
+        frequency: 20
+      });
+    </script>
+    <script>
+      function logout(){
+        window.location.replace("login.html");
+      }
+      </script>
+    <!-- bootsstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>   
+    <script src="../static/js/login.js"></script>
+
+
+    </body>
+</html>
+        

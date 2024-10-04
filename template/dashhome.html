@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../static/css/dashstyle.css">
+   <link rel="stylesheet" href="../static/css/dashlock.css">
+   <script src="../static/js/dashmock.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a class="navbar-brand" href="home.html"><img class="logo" src="posters/Gandharva (1) new.png" alt="" width="100px"
+         height="200px"></a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">{{request.user}}</h3>
+         <p class="role">student</p>
+         <a href="/dashprofile" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="/login" class="option-btn">logout</a>
+            <a href="/dashregister" class="option-btn">register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">{{request.user}}</h3>
+      <p class="role">student</p>
+      <a href="/dashprofile" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="/dash"><i class="fas fa-home"></i><span>dashboard</span></a>
+      <a href="/dashcourse"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="/dashregister"><i class="fas fa-question"></i><span>registration</span></a>
+      <a href="/dashtrainer"><i class="fas fa-chalkboard-user"></i><span>trainers</span></a>
+      <a href="/dashhelp"><i class="fas fa-chalkboard-user"></i><span>help and supports</span></a>
+      <a href="/login"><i class="fas fa-headset"></i><span>logout</span></a>
+   </nav>
+
+</div>
+
+<main class="content"></main>
+   <!-- <header>
+       <div class="header-wrapper">
+           <div class="header-left">
+               <div class="toggle-icon">
+                   <i class="fas fa-bars"></i>
+               </div>
+               <i class="fas fa-search"></i>
+               <input type="text" placeholder="Search...">
+           </div>
+           <div class="header-right">
+               <div class="star-container">
+                   <div class="star-left">
+                       <i class="far fa-star"></i>
+                       <span>star</span>
+                   </div>
+                   <div class="star-right">
+                       327
+                   </div>
+               </div>
+               <img src="img/avatar-2.png" alt="avatar">
+           </div>
+       </div>
+   </header> -->
+   <section class="main">
+       <div class="box box-1">
+           <div class="box-left">
+               <h4>congratulations {{request.user}}</h4>
+               <p>You have done 72% more sales today. Checkyour new badge in your profile.</p>
+               <!-- <a href="#">view badges</a> -->
+           </div>
+           <div class="box-right">
+               <img src="../media/posters/abt-41-1.webp" alt="profile">
+           </div>
+       </div>
+       <div class="box box-2">
+           <div class="box-details">
+               <h4>54</h4>
+               <span>customers</span>
+           </div>
+           <div class="box-icon">
+               <i class="fas fa-users"></i>
+           </div>
+       </div>
+       <div class="box box-3">
+           <div class="box-details">
+               <h4>79</h4>
+               <span>projects</span>
+           </div>
+           <div class="box-icon">
+               <i class="fas fa-tasks"></i>
+           </div>
+       </div>
+       <div class="box box-4">
+           <div class="box-details">
+               <h4>124</h4>
+               <span>orders</span>
+           </div>
+           <div class="box-icon">
+               <i class="fas fa-shopping-bag"></i>
+           </div>
+       </div>
+      
+       <div class="box box-5">
+           <div class="box-details">
+               <h4>$6k</h4>
+               <span>income</span>
+           </div>
+           <div class="box-icon">
+               <i class="fas fa-wallet"></i>
+           </div>
+       </div>
+       <div class="box box-8">
+         <div class="box-left">
+             <h4>profile report</h4>
+             <span class="year">year 2021</span>
+             <span class="percentage">^68.2%</span>
+             <h3>$84,686k</h3>
+         </div>
+         <div class="box-right">
+             <i class="fas fa-chart-line"></i>
+         </div>
+     </div>
+</section>
+
+
+<section  class="about">
+<div class="box-container">
+
+   <div class="box">
+      <i class="fas fa-graduation-cap"></i>
+      <div>
+         <h3>+10k</h3>
+         <p>online courses</p>
+      </div>
+   </div>
+
+   <div class="box">
+      <i class="fas fa-user-graduate"></i>
+      <div>
+         <h3>+40k</h3>
+         <p>brilliant students</p>
+      </div>
+   </div>
+
+   <div class="box">
+      <i class="fas fa-chalkboard-user"></i>
+      <div>
+         <h3>+2k</h3>
+         <p>expert tutors</p>
+      </div>
+   </div>
+
+   <div class="box">
+      <i class="fas fa-briefcase"></i>
+      <div>
+         <h3>100%</h3>
+         <p>job placement</p>
+      </div>
+   </div>
+
+</div>
+</section>
+<section>
+   <div class="container-look">
+       <div class="box-look graph-box">
+           <h2>Activity Bar Graph</h2>
+           <canvas id="barChart"></canvas>
+       </div>
+       <div class="box-look activities-box">
+           <h2>Activities</h2>
+           <div class="activities" id="activityList"></div>
+       </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="script.js"></script>
+</section>
+
+<style>
+  
+   .container-look {
+       display: flex;
+       gap: 30px;
+       justify-content: space-around;
+       align-items: flex-start;
+       width: 100%;
+       max-width: 1200px; /* Limit the width to look good on large screens */
+   }
+
+   .box-look {
+       background: white;
+       border-radius: 15px;
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       padding: 20px;
+       flex-grow: 1;
+       flex-basis: 0;
+       transition: transform 0.3s, width 0.3s;
+   }
+
+   .box-look:hover {
+       transform: rotateY(5deg);
+   }
+
+   .graph-box {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .activities-box {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .activities {
+       margin-top: 10px;
+       overflow: hidden;
+       height: 250px; /* Increased height to give more room for activities */
+   }
+
+   .activity {
+       background: linear-gradient(90deg, #6a11cb, #7993c1);
+       color: white;
+       margin: 10px 0;
+       
+       padding: 15px;
+       border-radius: 10px;
+       transition: transform 0.3s;
+       animation: slide 1s forwards;
+   }
+
+   @keyframes slide {
+       from {
+           transform: translateX(100%);
+       }
+       to {
+           transform: translateX(0);
+       }
+   }
+</style>
+
+<script>
+  const ctx = document.getElementById('barChart').getContext('2d');
+
+const barChart = new Chart(ctx, {
+   type: 'bar',
+   data: {
+       labels: ['Activity 1', 'Activity 2', 'Activity 3', 'Activity 4'],
+       datasets: [{
+           label: 'Activities Count',
+           data: [12, 19, 3, 5],
+           backgroundColor: [
+               'rgba(75, 192, 192, 0.8)',
+               'rgba(255, 99, 132, 0.8)',
+               'rgba(255, 206, 86, 0.8)',
+               'rgba(54, 162, 235, 0.8)'
+           ],
+           borderColor: [
+               'rgba(75, 192, 192, 1)',
+               'rgba(255, 99, 132, 1)',
+               'rgba(255, 206, 86, 1)',
+               'rgba(54, 162, 235, 1)'
+           ],
+           borderWidth: 1,
+           hoverBackgroundColor: [
+               'rgba(75, 192, 192, 0.5)',
+               'rgba(255, 99, 132, 0.5)',
+               'rgba(255, 206, 86, 0.5)',
+               'rgba(54, 162, 235, 0.5)'
+           ],
+           hoverBorderColor: [
+               'rgba(75, 192, 192, 1)',
+               'rgba(255, 99, 132, 1)',
+               'rgba(255, 206, 86, 1)',
+               'rgba(54, 162, 235, 1)'
+           ]
+       }]
+   },
+   options: {
+       scales: {
+           y: {
+               beginAtZero: true
+           }
+       },
+       plugins: {
+           legend: {
+               display: false
+           }
+       }
+   }
+});
+
+// Automatic activities display
+const activities = ['Activity 1', 'Activity 2', 'Activity 3', 'Activity 4'];
+let index = 0;
+
+function displayActivity() {
+   const activityList = document.getElementById('activityList');
+   activityList.innerHTML = '';
+   
+   for (let i = 0; i < 4; i++) {
+       const activityElement = document.createElement('div');
+       activityElement.className = 'activity';
+       activityElement.textContent = activities[(index + i) % activities.length];
+       activityList.appendChild(activityElement);
+   }
+
+   index++;
+   if (index >= activities.length) {
+       index = 0;
+   }
+}
+
+setInterval(displayActivity, 2000); // Change activities every 2 seconds
+</script>
+
+<!-- <section class="home-grid">
+
+   <h1 class="heading">quick options</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3 class="title">likes and comments</h3>
+         <p class="likes">total likes : <span>25</span></p>
+         <a href="#" class="inline-btn">view likes</a>
+         <p class="likes">total comments : <span>12</span></p>
+         <a href="#" class="inline-btn">view comments</a>
+         <p class="likes">saved playlists : <span>4</span></p>
+         <a href="#" class="inline-btn">view playlists</a>
+      </div>
+
+      <div class="box">
+         <h3 class="title">top categories</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-code"></i><span>development</span></a>
+            <a href="#"><i class="fas fa-chart-simple"></i><span>business</span></a>
+            <a href="#"><i class="fas fa-pen"></i><span>design</span></a>
+            <a href="#"><i class="fas fa-chart-line"></i><span>marketing</span></a>
+            <a href="#"><i class="fas fa-music"></i><span>music</span></a>
+            <a href="#"><i class="fas fa-camera"></i><span>photography</span></a>
+            <a href="#"><i class="fas fa-cog"></i><span>software</span></a>
+            <a href="#"><i class="fas fa-vial"></i><span>science</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">popular topics</h3>
+         <div class="flex">
+            <a href="#"><i class="fab fa-html5"></i><span>HTML</span></a>
+            <a href="#"><i class="fab fa-css3"></i><span>CSS</span></a>
+            <a href="#"><i class="fab fa-js"></i><span>javascript</span></a>
+            <a href="#"><i class="fab fa-react"></i><span>react</span></a>
+            <a href="#"><i class="fab fa-php"></i><span>PHP</span></a>
+            <a href="#"><i class="fab fa-bootstrap"></i><span>bootstrap</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">become a tutor</h3>
+         <p class="tutor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam?</p>
+         <a href="teachers.html" class="inline-btn">get started</a>
+      </div>
+
+   </div>
+
+</section> -->
+
+
+<!-- <section class="courses">
+
+   <h1 class="heading">our courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/profile-8.avif" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete HTML tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-2.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete CSS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-3.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-5.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-4.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete Boostrap tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-6.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-5.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JQuery tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-7.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-6.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete SASS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+   </div>
+
+   <div class="more-btn">
+      <a href="courses.html" class="inline-option-btn">view all courses</a>
+   </div>
+
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="../static/js/dashscript.js"></script>
+
+   
+</body>
+</html>

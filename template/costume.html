@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fontawesome.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- recommend card slider-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/dance.css">
+
+
+
+
+
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px rgb(144, 118, 236) !important;
+
+  }
+
+  .buddy {
+    cursor: pointer;
+  }
+
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144, 118, 236);
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  #scrollToTopButton:hover,
+  i:hover {
+    background-color: white;
+    color: rgb(144, 118, 236);
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #navbarNav.nav-item.nav-link a:hover {
+    color: rgb(144, 118, 236);
+  }
+
+  .nav-link:hover {
+    color: rgb(144, 118, 236);
+  }
+
+  .nav-item :hover {
+    margin-bottom: 10px;
+
+
+  }
+
+  #header-nav .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(144, 118, 236);
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Add transition effect */
+    text-shadow: 0 0 10px rgb(144, 118, 236);
+    /* Add glowing effect */
+  }
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+
+</script>
+
+
+<body>
+
+
+
+  <div class="scroll-bar">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="../static/posters/Gandharva (1) new.png" alt=""
+            width="300px" height="400px"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#8b1500" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active s" aria-current="page" href="home.html"
+                onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="movies.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">aboutus</a>
+            </li>
+            <!--<li class="nav-item">
+            </li>-->
+            <li>
+            <li class="nav-item">
+              <!-- Genre dropdown starts-->
+              <div>
+                <div class="dropdown"
+                  style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px;">
+                  <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                    onMouseOut="this.style.color='rgb(144,118,236)'">course</a>
+                  <!--<button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                                    Genres
+                                </button>-->
+                  <div class="dropdown-content" style="color:#fff">
+                    <a href="popular.html">singing course</a>
+                    <a href="crime.html">acting course</a>
+                    <a href="suspense.html">dance course</a>
+                    <a href="action.html">flimaking course </a>
+                    <a href="fantasy.html">costume desiging</a>
+                    <a href="documentary.html">set and property desiging</a>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Genre dropdown ends-->
+            </li>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tv.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">bookmyshow</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='rgbrgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">ContactUs</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+              <li>
+                <button type="button" class="btn btn-light" id="btn-logo" onclick="logout()"
+                  onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'">login</button>
+              </li>
+            </div>
+          </ul>
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" id="btn-logo" type="submit">Search</button>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar ends -->
+
+
+     <!-- Main head -->
+    <div class="header-main">
+      <div class="container-socks">
+          <div>
+              <div class="section-head">
+                  <h2 class="heading">
+                      {{ content.heading }}<br /><span>{{ content.subheading }}</span>
+                  </h2>
+              </div>
+              <p>
+                  {{ content.description }}
+              </p>
+              <a href="{{ content.button_link }}"><button class="btn-donate">
+                  {{ content.button_text }}
+              </button></a>
+          </div>
+          <img src="{{ content.image.url }}" alt="">
+      </div>
+  </div>
+
+    <!-- Main head -->
+    <!-- <div class="header-main">
+      <div class="container-socks">
+        <div>
+          <div class="section-head">
+            <h2 class="heading">
+              Why should you choose Dance<br /><span> at Gandharva ?</span>
+            </h2>
+          </div>
+          <p>
+            Discover the joy of dance at Gandharva natyasanskar, where passion meets excellence! Our institute offers
+            expertly led classes across a range of styles, including ballet, hip-hop, jazz, and contemporary. With
+            top-notch facilities, personalized instruction, and a supportive community, we provide an environment where
+            every dancer can thrive. Whether you’re a beginner or looking to refine your skills, our experienced
+            instructors are committed to helping you achieve your goals and shine on stage. Join us at Gandharva
+            natyasanskar and take your dance journey to the next level. Enroll now and let your dance dreams come to
+            life!
+          </p>
+          <a href="#"><button class="btn-donate">
+              registertion now
+            </button></a>
+        </div>
+        <img
+          src="https://www.urbanears.com/on/demandware.static/-/Sites-zs-master-catalog/default/dw3ea85f87/images/urbanears/headphones/plattan-2-bluetooth/hi-res/Plattan2BT_Image_large_indigo@4x.png"
+          alt="">
+      </div>
+    </div> -->
+
+    <!-- Headphone overlay
+  <img src="https://png.pngtree.com/png-vector/20190504/ourlarge/pngtree-headphone-icon-design-template-vector-png-image_1020052.jpg" alt="" class="headphone">
+ -->
+    <!-- <section>
+      <div class="testimonials-container-look">
+        <h2 class="head">Feature for dance </h2>
+      </div> -->
+
+      <!--feature card-->
+      <!-- <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Classes are led by professional dancers with years of teaching experience, ensuring high-quality
+                instruction.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Offering a variety of styles, from ballet to hip-hop, catering to different interests and skill levels.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Multiple class times available throughout the week to accommodate different schedules and commitments.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Our Social events and workshops to foster a sense of camaraderie among students.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Modern dance studios with high-quality flooring and mirrors.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <div class="ag-courses-item_title">
+                Individual attention and constructive feedback to help each dancer improve.
+              </div>
+
+              <div class="ag-courses-item_date-box"> -->
+                <!-- Start: -->
+                <!-- <span class="ag-courses-item_date"> -->
+                  <!-- 04.11.2022 -->
+                <!-- </span>
+              </div>
+            </a>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </section> -->
+
+
+    <div class="testimonials-container-look">
+      <h2 class="head">Feature for Dance</h2>
+  </div>
+
+  <!-- feature card -->
+  <div class="ag-format-container">
+      <div class="ag-courses_box">
+          {% for feature in features %}
+          <div class="ag-courses_item">
+              <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+
+                  <div class="ag-courses-item_title">
+                      {{ feature.description }}
+                  </div>
+
+                  <div class="ag-courses-item_date-box">
+                      <!-- Start: -->
+                      <span class="ag-courses-item_date">
+                          {{ feature.date|date:"d.m.Y" }}
+                      </span>
+                  </div>
+              </a>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</section>
+    <!-- <div class="hero-info">
+      <h1>One Stop Solution for our  Gandharv institute  <span> Dance</span></h1>
+    </div> -->
+    <section>
+      <div class="testimonials-container">
+        <h2 class="head-on">One Stop Solution for our Gandharv Institute</h2>
+        <br><span class="mook">Dance</span>
+      </div>
+     <!-- templates/dance_section.html -->
+
+  <div class="container-not">
+    {% for course in courses %}
+      <div class="box">
+     
+        <div class="thumbnail right">
+          <img src="{{ course.image.url }}" alt="{{ course.title }}" />
+        </div>
+        <div class="text-content">
+          <div class="course-heading">
+            <h4>{{ course.title }}</h4>
+          </div>
+          <p>{{ course.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="box">
+      <div class="thumbnail left">
+          <img src="{{ content.image.url }}" alt="Dance Course Image" />
+      </div>
+      <div class="text-content">
+          <div class="course-heading">
+              <h4>Course Syllabus</h4>
+          </div>
+          <div class="syllabus-container">
+              <div class="syllabus-box">
+                  <!-- Loop through syllabus contents dynamically -->
+                  {% for item in syllabus %}
+                  <div class="syllabus-content">
+                      <h4>{{ item.title }} <span class="dropdown-sign">+</span></h4>
+                      <p class="syllabus-description">{{ item.description }}</p>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+
+    {% for duration in durations %}
+      <div class="box">
+        <div class="thumbnail right">
+          <img src="{{duration.image.url }}" alt="{{ duration.title }}" />
+        </div>
+        <div class="text-content">
+          <div class="course-heading">
+            <h4>Course Duration</h4>
+          </div>
+          <p>{{ duration.duration }}</p>
+          <div class="additional-info">
+            <h4 class="info-heading">Time:</h4>
+            <p>{{ duration.time_slots }}</p>
+
+            <h4 class="info-heading">Batch:</h4>
+            <ul>
+              {{ duration.batches|safe }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    {% for fee in fees %}
+      <div class="box">
+        <div class="text-content-mock">
+          <div class="course-heading">
+            <h4>Course Fees</h4>
+          </div>
+          <div class="main__cards cards">
+            <div class="cards__inner">
+              <div class="cards__card card">
+                <h2 class="card__heading">Basic</h2>
+                <p class="card__price">{{ fee.basic_price }}</p>
+                <ul role="list" class="card__bullets flow">
+                  <li>{{ fee.text }}</li>
+                  <li>{{fee.text}}</li>
+                </ul>
+                <a href="#basic" class="card__cta cta">Get Started</a>
+              </div>
+
+              <div class="cards__card card">
+                <h2 class="card__heading">advance</h2>
+                <p class="card__price">{{ fee.pro_price }}</p>
+                <ul role="list" class="card__bullets flow">
+                  <li>{{ fee.text2 }}</li>
+                  <li>{{ fee.text2 }}</li>
+                  <li>{{ fee.text2 }}</li>
+                </ul>
+                <a href="#pro" class="card__cta cta">Upgrade to Pro</a>
+              </div>
+            </div>
+            <div class="overlay cards__inner"></div>
+          </div>
+        </div>
+      </div>
+      
+    {% endfor %}
+  </div>
+</section>
+
+
+
+      <!-- <div class="container-not">
+        <div class="box">
+          <div class="thumbnail right">
+            <img src="../static/posters/2photos.jpg" alt="Dance Course Image" />
+          </div>
+          <div class="text-content">
+            <div class="course-heading">
+              <h4>Course Description</h4>
+            </div>
+            <p>
+              Discover the rhythm and grace of dance at our premier dance class institute! We offer a dynamic range of
+              classes tailored to all ages and skill levels, from ballet and jazz to contemporary and hip-hop. Our
+              expert instructors, with years of professional experience, are dedicated to nurturing each dancer's
+              potential in a supportive and creative environment. We have 4 batches throughout the day starting from
+              morning 7:00am to 8:30am, 10:00am to 11:30am, and in the evening from 5:00pm to 6:30pm, 7:00pm to 8:30pm.
+              Join us for free introductory workshops and open houses to experience our state-of-the-art facilities
+              firsthand. Don’t miss out—enroll now and take advantage of our special offers and referral rewards. Follow
+              us on social media and sign up for our newsletter to stay updated on the latest classes, events, and
+              success stories. Step into the spotlight and dance your way to excellence with us!
+            </p>
+
+
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="thumbnail left">
+            <img src="../static/posters/2photos.jpg" alt="Dance Course Image" />
+          </div>
+          <div class="text-content">
+            <div class="course-heading">
+              <h4>Course Syllabus</h4>
+            </div>
+            <div class="syllabus-container">
+              <div class="syllabus-box">
+                <div class="syllabus-content">
+                  <h4>Design <span class="dropdown-sign">+</span></h4>
+                  <p class="syllabus-description">Explore the fundamentals of dance design, including choreography,
+                    stage setting, and costume design, with a focus on artistic expression and technical proficiency.
+                  </p>
+                </div>
+                <div class="syllabus-content">
+                  <h4>Dancing <span class="dropdown-sign">+</span></h4>
+                  <p class="syllabus-description">Dive deep into various dance forms, from classical to contemporary,
+                    learning techniques, styles, and the cultural significance of each.</p>
+                </div>
+                <div class="syllabus-content">
+                  <h4>Types <span class="dropdown-sign">+</span></h4>
+                  <p class="syllabus-description">Understand different types of dances, their origins, and how they have
+                    evolved over time. This section includes both theoretical and practical knowledge.</p>
+                </div> -->
+                <!-- Add more syllabus-content blocks for the other 5 contents
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="thumbnail right">
+            <img src="../static/posters/2photos.jpg" alt="Dance Course Image" />
+          </div>
+          <div class="text-content">
+            <div class="course-heading">
+              <h4>course Duration</h4>
+            </div>
+            <p>
+              there are follwing us:
+            </p> -->
+            <!-- New content added below -->
+            <!-- <div class="additional-info">
+              <h4 class="info-heading">Duration:</h4>
+              <p>Our courses run for 6 weeks, with each class lasting 90 minutes.</p>
+
+              <h4 class="info-heading">Time:</h4>
+              <p>Morning and evening slots are available. See the batch details below.</p>
+
+              <h4 class="info-heading">Batch:</h4>
+              <ul>
+                <li>Batch 1: 7:00am - 8:30am</li>
+                <li>Batch 2: 10:00am - 11:30am</li>
+                <li>Batch 3: 5:00pm - 6:30pm</li>
+                <li>Batch 4: 7:00pm - 8:30pm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text-content-mock">
+            <div class="course-heading">
+              <h4>course fees</h4>
+            </div> -->
+            <!-- <h1 class="main__heading">Pricing</h1> -->
+            <!-- <div class="main__cards cards">
+              <div class="cards__inner">
+                <div class="cards__card card">
+                  <h2 class="card__heading">Basic</h2>
+                  <p class="card__price">$9.99</p>
+                  <ul role="list" class="card__bullets flow">
+                    <li>Access to standard workouts and nutrition plans</li>
+                    <li>Email support</li>
+                  </ul>
+                  <a href="#basic" class="card__cta cta">Get Started</a>
+                </div>
+
+                <div class="cards__card card">
+                  <h2 class="card__heading">Pro</h2>
+                  <p class="card__price">$19.99</p>
+                  <ul role="list" class="card__bullets flow">
+                    <li>Access to advanced workouts and nutrition plans</li>
+                    <li>Priority Email support</li>
+                    <li>Exclusive access to live Q&A sessions</li>
+                  </ul>
+                  <a href="#pro" class="card__cta cta">Upgrade to Pro</a>
+                </div>
+
+
+              </div>
+
+              <div class="overlay cards__inner"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section> -->
+
+    <style>
+      /* Existing styles here */
+
+      /* Styles for the new additional info */
+      .additional-info {
+        margin-top: 20px;
+        background-color: #232536;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .info-heading {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .additional-info p,
+      .additional-info ul {
+        font-size: 1rem;
+        color: #ddd;
+        margin-left: 15px;
+      }
+
+      .additional-info ul {
+        list-style-type: disc;
+        margin-top: 5px;
+      }
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+
+
+      .text-content-mock{
+        align-items: center;
+        padding: 30px;
+        margin: 40px;
+        gap:2.5rem;
+        display: grid;
+        /* justify-content: center; */
+
+      }
+      ul {
+        list-style: none;
+      }
+
+      .main {
+        max-width: 75rem;
+        /* padding: 3em 1.5em; */
+      }
+
+      .main__heading {
+        font-weight: 600;
+        font-size: 2.25em;
+        margin-bottom: 0.75em;
+        text-align: center;
+        color: #eceff1;
+      }
+
+      .cards {
+  position: relative;
+}
+
+      .cards__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5em;
+      }
+
+      .card {
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+}
+
+      .card:nth-child(1) {
+        --hue: 165;
+        --saturation: 82.26%;
+        --lightness: 51.37%;
+      }
+
+      .card:nth-child(2) {
+        --hue: 291.34;
+        --saturation: 95.9%;
+        --lightness: 61.76%;
+      }
+
+      .card:nth-child(3) {
+        --hue: 338.69;
+        --saturation: 100%;
+        --lightness: 48.04%;
+      }
+
+      .card__bullets {
+        line-height: 1.4;
+      }
+
+     .card__bullets li::before {
+  display: inline-block;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
+  transform: translatey(0.25ch);
+  margin-right: 1ch;
+}
+
+      .card__heading {
+        font-size: 1.05em;
+        font-weight: 600;
+      }
+
+      .card__price {
+        font-size: 1.75em;
+        font-weight: 700;
+      }
+
+      .flow>*+* {
+        margin-top: var(--flow-space, 1.25em);
+      }
+
+      .cta {
+        display: block;
+        align-self: end;
+        margin: 1em 0 0.5em 0;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #0d0d0d;
+        padding: 0.7em;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        user-select: none;
+        opacity: var(--opacity, 0);
+        -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y),
+            #000 1%,
+            transparent 50%);
+        mask: radial-gradient(25rem 25rem at var(--x) var(--y),
+            #000 1%,
+            transparent 50%);
+        transition: 400ms mask ease;
+        will-change: mask;
+      }
+
+      .overlay .card {
+        background-color: hsla(var(--hsl), 0.15);
+        border-color: hsla(var(--hsl), 1);
+        box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+      }
+
+      .overlay .cta {
+        display: block;
+        grid-row: -1;
+        width: 100%;
+        background-color: hsl(var(--hsl));
+        box-shadow: 0 0 0 1px hsl(var(--hsl));
+      }
+
+      :not(.overlay)>.card {
+        transition: 400ms background ease;
+        will-change: background;
+      }
+
+      :not(.overlay)>.card:hover {
+        --lightness: 95%;
+        background: hsla(var(--hsl), 0.1);
+      }
+    </style>
+    <script>
+      console.clear();
+
+      const cardsContainer = document.querySelector(".cards");
+      const cardsContainerInner = document.querySelector(".cards__inner");
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const overlay = document.querySelector(".overlay");
+
+      const applyOverlayMask = (e) => {
+        const overlayEl = e.currentTarget;
+        const x = e.pageX - cardsContainer.offsetLeft;
+        const y = e.pageY - cardsContainer.offsetTop;
+
+        overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
+      };
+
+      const createOverlayCta = (overlayCard, ctaEl) => {
+        const overlayCta = document.createElement("div");
+        overlayCta.classList.add("cta");
+        overlayCta.textContent = ctaEl.textContent;
+        overlayCta.setAttribute("aria-hidden", true);
+        overlayCard.append(overlayCta);
+      };
+
+      const observer = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+          const cardIndex = cards.indexOf(entry.target);
+          let width = entry.borderBoxSize[0].inlineSize;
+          let height = entry.borderBoxSize[0].blockSize;
+
+          if (cardIndex >= 0) {
+            overlay.children[cardIndex].style.width = `${width}px`;
+            overlay.children[cardIndex].style.height = `${height}px`;
+          }
+        });
+      });
+
+      const initOverlayCard = (cardEl) => {
+        const overlayCard = document.createElement("div");
+        overlayCard.classList.add("card");
+        createOverlayCta(overlayCard, cardEl.lastElementChild);
+        overlay.append(overlayCard);
+        observer.observe(cardEl);
+      };
+
+      cards.forEach(initOverlayCard);
+      document.body.addEventListener("pointermove", applyOverlayMask);
+
+    </script>
+    <script>
+      // JavaScript for toggling dropdowns
+      document.querySelectorAll('.syllabus-content').forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+          const dropdownSign = item.querySelector('.dropdown-sign');
+          dropdownSign.textContent = dropdownSign.textContent === '+' ? '-' : '+';
+        });
+      });
+    </script>
+
+
+    <!-- <div class="box">
+          <div class="thumbnail right">
+            <img src="../static/posters/2photos.jpg" alt="Dance Course Image" />
+          </div>
+          <div class="text-content">
+            <div class="course-heading">
+              <h4>course Duration</h4>
+            </div>
+            <p>
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+              over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="thumbnail left">
+            <img src="../static/posters/2photos.jpg" alt="Dance Course Image" />
+          </div>
+          <div class="text-content">
+            <div class="course-heading">
+              <h4>course fees</h4>
+            </div>
+            <p>
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+              over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--text-->
+
+
+
+
+    <!-- slider_template.html -->
+
+<figure>
+  <div>
+    <h1 class="make">Recommend for our Institute Services</h1>
+  </div>
+  <div class="slider owl-carousel">
+    {% for item in costumeslider_items %}
+    <div class="card-mock">
+      <div class="img-card">
+        <img src="{{ item.image.url }}" alt="{{ item.title }}" />
+      </div>
+      <div class="content-card">
+        <div class="title-card">{{ item.title }}</div>
+        <!-- <div class="sub-title-card">{{ item.subtitle }}</div>
+        <p>{{ item.description }}</p> -->
+        <div class="card-buttons">
+          <a href="{{ item.register_button_link }}" class="btn-coc register-btn" id="registerBtn">{{ item.register_button_text }}</a>
+          <a href="{{ item.view_button_link }}" class="btn-coc view-btn" id="viewBtn">{{ item.view_button_text }}</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</figure>
+
+<script>
+  $(".slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000, //2000ms = 2s;
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 3 }
+    }
+  });
+</script>
+
+
+
+    <!-- Recommended card slider -->
+    <!-- <figure>
+      <div>
+        <h1 class="make">Recommend for our Institute Services</h1>
+      </div>
+      <div class="slider owl-carousel">
+        <div class="card-mock">
+          <div class="img-card">
+            <img
+              src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTNQx6dAy_XJh-wLZwOd5qGL63kg_JOHHqe8QJOsg5-C9HYswaFOAvHAkOx-KLHxsSU" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Dance
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- Fortress built by King Kashyapa -->
+            <!-- </div>
+            <p>
+              Through dance, individuals transcend words, using their bodies to convey joy, sorrow, and everything in
+              between.
+              It unites people across cultures and generations in a shared celebration of artistry.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-mock">
+          <div class="img-card">
+            <img src="https://classiclanka.com/wp-content/uploads/2022/06/Galle.webp" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Acting
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- Known for its historic fort -->
+            <!-- </div>
+            <p>
+              Our acting class is a dynamic space where we explore character depth and emotional range through immersive
+              exercises
+              and scene work. It's a supportive environment to refine your craft.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-mock">
+          <div class="img-card">
+            <img src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Singing
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- The Last Kingdom -->
+            <!-- </div>
+            <p>
+              Our singing class focuses on developing vocal technique and expression through personalized instruction
+              and diverse
+              musical styles. It’s a nurturing environment where you can enhance your voice.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-mock">
+          <div class="img-card">
+            <img src="https://www.lovidhu.com/uploads/posts-seo/2021/05/polonnaruwa-vatadage-sri-lanka.jpg" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Flimmaking
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- The second major Sinhalese kingdom -->
+            <!-- </div>
+            <p>
+              Our filmmaking class immerses you in the entire production process, from concept to final cut.
+              You'll gain practical skills in directing, editing, and cinematography to bring your creative to life.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc  view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-mock">
+          <div class="img-card">
+            <img
+              src="https://www.jetwinghotels.com/jetwingviluyana/wp-content/uploads/sites/2/2017/09/dambulla-temple-1.jpg" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Costume Desiging
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- The best-preserved cave temple -->
+            <!-- </div>
+            <p>
+              Our costume design class explores the art of creating costumes that enhance character and storytelling.
+              You'll learn techniques in fabric selection, pattern making & etc.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-mock">
+          <div class="img-card">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/16/db/91/41/the-city-now-a-world.jpg" />
+          </div>
+          <div class="content-card">
+            <div class="title-card">
+              Set & Property Desiging
+            </div>
+            <div class="sub-title-card"> -->
+              <!-- The first ever Sinhala kingdom -->
+            <!-- </div>
+            <p>
+              Our set and property design class delves into crafting immersive environments that elevate storytelling.
+              You'll master skills in spatial design, material selection & much more.
+            </p>
+            <div class="card-buttons">
+              <button class="btn-coc register-btn" id="registerBtn">Register Now</button>
+              <button class="btn-coc view-btn" id="viewBtn">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(".slider").owlCarousel({
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 2000, //2000ms = 2s;
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      </script>
+    </figure> -->
+
+
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+      <hr class="footer-hr">
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="home.html"><img class="footer-logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30"
+              height="24"></a>
+          <p class="footer-bottom-tagline"></p>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Follow Us</h2>
+          <ul class="footer-middle-list icons">
+            <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f facebook" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                class="fab fa-twitter twitter" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                class="fab fa-linkedin linkedin" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                class="fab fa-instagram instagram" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website" target="_blank"><i
+                class="fab fa-github github" style="color:rgb(144,118,236)"></i></a>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">course</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item"><a href="home.html">Acting Course</a> </li>
+            <li class="footer-middle-list-item"><a href="web-series.html">Singing Course</a> </li>
+            <li class="footer-middle-list-item"><a href="kids.html">Dance Course</a> </li>
+            <li class="footer-middle-list-item"><a href="news.html">Flimmaking Course</a> </li>
+            <li class="footer-middle-list-item"><a href="premium.html">Costume Desiging</a> </li>
+            <li class="footer-middle-list-item"><a href="faq.html">Set And Property Designing</a> </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">QUICK LINKS</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item"><a href="home.html">Home</a> </li>
+            <li class="footer-middle-list-item"><a href="web-series.html">aboutus</a> </li>
+            <li class="footer-middle-list-item"><a href="kids.html">course</a> </li>
+            <li class="footer-middle-list-item"><a href="news.html">plays</a> </li>
+            <li class="footer-middle-list-item"><a href="premium.html">Contact Us</a> </li>
+            <li class="footer-middle-list-item"><a href="faq.html">Log In</a> </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Try Our App</h2>
+          <ul class="footer-middle-list icons">
+            <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color: rgb(144,118,236)"></i></a>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-links">
+          <h2 class="footer-heading">Contact Us</h2>
+          <p class="footer-bottom-tagline"></p>
+          <a class="footer-contact-button" href="contactus.html">Contact</a>
+          </p>
+        </div>
+      </div>
+      <!-- <hr class="footer-hr">
+  <div class="footer-copyright">
+    <p>Copyright &copy; and &reg; Since
+      <script>
+        document.write(new Date().getFullYear())
+      </script> Under ApnaTheatre.com :
+    </p> -->
+  </div>
+  </footer>
+
+
+  <!----------------------scroll back to top button-->
+  <button id="scrollToTopButton" title="Go to top">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </button>
+  <script>
+    $(document).ready(function () {
+      var scrollTopButton = document.getElementById("scrollToTopButton");
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      }
+
+      $("#scrollToTopButton").click(function () {
+        $('html ,body').animate({ scrollTop: 0 }, 800)
+      });
+    });
+  </script>
+
+  <!-- footer scripts -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main-min.js"></script>
+
+
+
+  <script>
+    jQuery('#waterdrop').raindrops({
+      color: '#292c2f',
+      canvasHeight: 150,
+      density: 0.1,
+      frequency: 20
+    });
+  </script>
+  <script>
+    function logout() {
+      window.location.replace("login.html");
+    }
+  </script>
+  <!-- bootsstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="../static/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>teachers</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/teacher.css">
+
+</head>
+
+<body>
+
+   <header class="header">
+
+      <section class="flex">
+
+         <a class="navbar-brand" href="home.html"><img class="logo" src="posters/Gandharva (1) new.png" alt=""
+               width="100px" height="200px"></a>
+
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">shaikh anas</h3>
+            <p class="role">student</p>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="#" class="option-btn">logout</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+         </div>
+
+      </section>
+
+   </header>
+
+   <div class="side-bar">
+
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">shaikh anas</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+      </div>
+
+      <nav class="navbar">
+         <a href="home.html"><i class="fas fa-home"></i><span>dashboard</span></a>
+         <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+         <a href="register.html"><i class="fas fa-question"></i><span>registration</span></a>
+         <a href="teacher2.html"><i class="fas fa-chalkboard-user"></i><span>trainers</span></a>
+         <a href="help.html"><i class="fas fa-chalkboard-user"></i><span>help and supports</span></a>
+         <a href="#"><i class="fas fa-headset"></i><span>logout</span></a>
+      </nav>
+
+   </div>
+
+   <section class="teachers">
+
+      <h1 class="heading">expert teachers</h1>
+
+      <form action="" method="post" class="search-tutor">
+         <input type="text" name="search_box" placeholder="search tutors..." required maxlength="100">
+         <button type="submit" class="fas fa-search" name="search_tutor"></button>
+      </form>
+
+
+  
+
+
+
+
+   <div class="container">
+      <div class="heading">
+         <h1>Our Teams <span>🎭</span></h1>
+     </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer1.jpg')">
+            <img src="trainer1.jpg" alt="Trainer 1" class="trainer-img">
+         </div>
+         <h3>Trainer Name 1</h3>
+         <h4>Profession: Singing Artist</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem temporibus facere quibusdam modi
+            provident quos a laboriosam quis necessitatibus velit quidem placeat, sunt earum similique n</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer2.jpg')">
+            <img src="trainer2.jpg" alt="Trainer 2" class="trainer-img">
+         </div>
+         <h3>Trainer Name 2</h3>
+         <h4>Profession: A Acting Artist</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorem iste voluptates aperiam necessitatibus
+            ipsam tempora recusandae harum accusamus, provident, assumenda, inventore vel temporibus cumque velit
+            suscipit ipsum totam magnam.</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer3.jpg')">
+            <img src="trainer3.jpg" alt="Trainer 3" class="trainer-img">
+         </div>
+         <h3>Trainer Name 3</h3>
+         <h4>Profession: Dance Artist</h4>
+         <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus omnis nesciunt porro blanditiis
+            repudiandae aliquid et dolores aut doloremque quod, minima quam, facere earum iusto eum accusamus inventore
+            fugiat voluptate?
+         </p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer4.jpg')">
+            <img src="trainer4.jpg" alt="Trainer 4" class="trainer-img">
+         </div>
+         <h3>Trainer Name 4</h3>
+         <h4>Profession: Music Producer</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur obcaecati magni dicta minus,
+            corporis accusantium veniam deserunt explicabo nesciunt corrupti, voluptates earum voluptatibus. Fugiat
+            asperiores consequatur itaque optio reiciendis?</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer4.jpg')">
+            <img src="trainer4.jpg" alt="Trainer 4" class="trainer-img">
+         </div>
+         <h3>Trainer Name 4</h3>
+         <h4>Profession: Music Producer</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quas doloribus excepturi laudantium delectus
+            recusandae odio iusto. Delectus atque debitis libero labore optio! Voluptatem placeat tempora, labore
+            corrupti accusamus laboriosam.</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer4.jpg')">
+            <img src="trainer4.jpg" alt="Trainer 4" class="trainer-img">
+         </div>
+         <h3>Trainer Name 4</h3>
+         <h4>Profession: Music Producer</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consequuntur illum velit voluptatem eius
+            incidunt voluptas natus fuga perspiciatis animi dolore cumque corporis numquam consectetur rerum
+            consequatur, perferendis repudiandae amet.</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer4.jpg')">
+            <img src="trainer4.jpg" alt="Trainer 4" class="trainer-img">
+         </div>
+         <h3>Trainer Name 4</h3>
+         <h4>Profession: Music Producer</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum repudiandae maiores ipsam cum
+            harum aliquam minima fugiat ipsum sint architecto, beatae nesciunt fuga laboriosam autem possimus dolores.
+            Dolorum, cupiditate.
+
+         </p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+        <a href="teacher_profile.html"> <button class="view-profile" >View Profile</button></a>
+      </div>
+      <div class="card">
+         <div class="img-container" onclick="showImage('trainer4.jpg')">
+            <img src="images/profile-8.avif" alt="Trainer 4" class="trainer-img">
+         </div>
+         <h3>Trainer Name 4</h3>
+         <h4>Profession: Music Producer</h4>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. C
+            um aliquam libero eaque placeat quasi officia qui facere laudantium! Veniam excepturi nulla alias ipsum eum,
+            ad libero temporibus ullam laudantium iusto!</p>
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
+         <a href="teacher_profile.html"><button class="view-profile">View Profile</button></a>
+      </div>
+      <!-- Add 4 more trainer cards here -->
+   </div>
+
+   <div id="overlay" class="overlay" onclick="this.style.display='none'">
+      <img id="overlay-img" class="overlay-img">
+   </div>
+</section>
+   <script src="script.js"></script>
+
+   <script>
+      function showImage(src) {
+         const overlay = document.getElementById('overlay');
+         const overlayImg = document.getElementById('overlay-img');
+         overlayImg.src = src;
+         overlay.style.display = 'flex';
+      }
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <footer class="footer">
+
+      &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+   </footer>
+
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

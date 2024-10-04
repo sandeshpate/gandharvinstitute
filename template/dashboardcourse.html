@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>courses</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../static/css/dashstyle.css">
+
+</head>
+<body>
+   <header class="header">
+   
+      <section class="flex">
+   
+         <a class="navbar-brand" href="#"><img class="logo" src="posters/Gandharva (1) new.png" alt="" width="100px"
+            height="200px"></a>
+   
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name"> {{request.user}}</h3>
+            <p class="role">student</p>
+            <a href="/dashprofile" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="/login" class="option-btn">logout</a>
+               <a href="/dashregister" class="option-btn">register</a>
+            </div>
+         </div>
+   
+      </section>
+   
+   </header>   
+   
+   <div class="side-bar">
+   
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name"> {{request.user}}</h3>
+         <p class="role">student</p>
+         <a href="/dashprofile" class="btn">view profile</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="/dash"><i class="fas fa-home"></i><span>dashboard</span></a>
+         <a href="/dashcourse"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+         <a href="/dashregister"><i class="fas fa-question"></i><span>registration</span></a>
+         <a href="/dashtrainer"><i class="fas fa-chalkboard-user"></i><span>trainers</span></a>
+         <a href="/dashhelp"><i class="fas fa-chalkboard-user"></i><span>help and supports</span></a>
+         <a href="/login"><i class="fas fa-headset"></i><span>logout</span></a>
+      </nav>
+   
+   </div>
+   
+
+<!-- <section class="courses">
+
+   <h1 class="heading">our courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete HTML tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-2.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete CSS tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-3.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JS tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-5.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-4.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete Boostrap tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-6.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-5.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JQuery tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-7.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-6.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete SASS tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-8.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-7.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete PHP tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-9.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-8.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete MySQL tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-1.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-9.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete react tutorial</h3>
+         <a href="dashregister.html" class="inline-btn">registration course</a>
+      </div>
+
+   </div>
+
+</section> -->
+<section class="courses">
+   <h1 class="heading">Our Courses</h1>
+
+   <div class="box-container">
+      {% for coursess in dashcourses %}
+      <div class="box">
+         <div class="tutor">
+            <img src="{{ coursess.tutor_image.url }}" alt="">
+            <div class="info">
+               <h3>{{ coursess.tutor_name }}</h3>
+               <span>{{ coursess.course_date }}</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="{{ coursess.thumbnail.url }}" alt="">
+            <!-- <span>{{ course.video_count }} videos</span> -->
+         </div>
+         <h3 class="title">{{ coursess.course_title }}</h3>
+         <a href="{{ coursess.registration_link }}" class="inline-btn">Registration Course</a>
+      </div>
+      {% endfor %}
+   </div>
+</section>
+
+
+<section>
+
+   
+    <h1>Certification of Course</h1>
+
+    <div class="certificate-box">
+        <img src="../static/posters/Untitled_design_(1)[1].png" id="certificate" alt="Certificate">
+    </div>
+
+    <div class="download-buttons">
+        <button onclick="downloadImage()">Download as Image</button>
+        <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+
+    
+
+</section>
+
+<script>
+   function downloadImage() {
+       const link = document.createElement('a');
+       link.href = 'Untitled_design_(1)[1].png'; // Path to the image
+       link.download = 'certificate.png'; // Download as PNG
+       document.body.appendChild(link);
+       link.click();
+       document.body.removeChild(link);
+   }
+
+   function downloadPDF() {
+       const imgData = document.getElementById('certificate').src;
+       const doc = new jsPDF();
+       doc.addImage(imgData, 'PNG', 15, 40, 180, 160);
+       doc.save('certificate.pdf');
+   }
+</script>
+
+<!-- Add jsPDF library for PDF functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+  
+
+   h1 {
+       text-align: center;
+       color: #3A3A3A;
+       font-size: 36px;
+       margin-bottom: 20px;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       background: -webkit-linear-gradient(#d3d1d4, #413f3e);
+       --webkit-background-clip: text;
+       --webkit-text-fill-color: transparent;
+   }
+
+   .certificate-box {
+       width: 60%;
+       margin: 0 auto;
+       padding: 20px;
+       /* background-color: rgba(0,0,0,0.2); */
+       background-color:#3A3A3A;
+       border-radius: 15px;
+       /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+       transform: perspective(800px) rotateX(10deg); */
+   }
+
+   .certificate-box img {
+       width: 100%;
+       border-radius: 10px;
+   }
+
+   .download-buttons {
+       margin-top: 20px;
+       display: flex;
+       justify-content: center; /* This centers the buttons */
+   }
+
+   .download-buttons button {
+       padding: 10px 20px;
+       margin: 5px;
+       background-color: #fc4a1a;
+       border: none;
+       color: white;
+       cursor: pointer;
+       border-radius: 5px;
+       transition: background-color 0.3s;
+   }
+
+   .download-buttons button:hover {
+       background-color: #f7b733;
+   }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="../static/js/dashscript.js"></script>
+
+   
+</body>
+</html>

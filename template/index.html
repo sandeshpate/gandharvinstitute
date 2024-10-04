@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <!-- {% load static %} -->
+  <link rel="shortcut icon" href="img/Naatyasanskaar.png" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fontawesome.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!--main css-->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link href="../static/css/faq.css" rel="stylesheet" type="text/css" />
+
+
+
+
+</head>
+<style>
+  /* photo contaioner*/
+  section {
+    margin: 0;
+    display: flex !important;
+    width: 100%;
+    height: 100vh;
+    min-height: max-content;
+  }
+
+  .photo-container {
+
+    height: 650px;
+    margin: 3%;
+    width: 60% !important;
+
+    position: relative;
+    display: block;
+    z-index: 100;
+    align-items: right;
+
+  }
+
+  .pp {
+    height: 100%;
+    width: 40%;
+    /* display: flex;
+  justify-content: center;  
+  align-items: center; */
+    /* padding-right: 50%; */
+    padding-top: 180px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .pp li {
+    list-style: none;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: start;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+
+  .photo-container.two {
+    width: 850px;
+  }
+
+  .photo-container.three {
+    width: 1100px;
+  }
+
+  .parallax {
+    width: 450px;
+    position: absolute;
+    height: 450px;
+    margin: 50px 0 0 0;
+    display: block;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+    --moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+    --box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  }
+
+  .parallax.left {
+    left: 0;
+  }
+
+  .parallax.right {
+    left: 40%;
+  }
+
+  .parallax.middle {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .parallax.lower50 {
+    top: 50px;
+  }
+
+  .parallax.lower100 {
+    top: 100px;
+  }
+
+  .parallax.top {
+    z-index: 2;
+  }
+
+  .parallax.bottom {
+    z-index: 1;
+  }
+
+
+  /* button css*/
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    width: 100%;
+
+  }
+
+  .shadow__btn>a {
+    color: white;
+  }
+
+  .shadow__btn {
+    justify-self: left;
+    background: linear-gradient(90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%);
+    box-shadow: 0 0 25px rgb(144, 118, 236);
+  }
+
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+      0 0 25px rgb(0, 140, 255),
+      0 0 50px rgb(0, 140, 255),
+      0 0 100px rgb(0, 140, 255);
+  }
+
+  .shadow__btn>a:hover {
+    color: white;
+  }
+</style>
+
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px rgb(144, 118, 236) !important;
+
+  }
+
+  .buddy {
+    cursor: pointer;
+  }
+
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144, 118, 236);
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  #scrollToTopButton:hover,
+  i:hover {
+    background-color: white;
+    color: rgb(144, 118, 236);
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #navbarNav.nav-item.nav-link a:hover {
+    color: rgb(144, 118, 236);
+  }
+
+  .nav-link:hover {
+    color: rgb(144, 118, 236);
+  }
+
+  .nav-item :hover {
+    margin-bottom: 10px;
+
+
+  }
+
+  #header-nav .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(144, 118, 236);
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Add transition effect */
+    text-shadow: 0 0 10px rgb(144, 118, 236);
+    /* Add glowing effect */
+  }
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+
+</script>
+<script>
+  document.querySelector('.nav-link').addEventListener('mouseover', function () {
+    document.querySelector('.dropdown-content').style.display = 'block';
+  });
+  document.querySelector('.dropdown').addEventListener('mouseleave', function () {
+    document.querySelector('.dropdown-content').style.display = 'none';
+  });
+</script>
+
+
+<body>
+
+
+
+  <div class="scroll-bar">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="../static/posters/Gandharva (1) new.png" alt=""
+            width="30" height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#8b1500" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active s" aria-current="page" href="home.html"
+                onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">Home</a>
+            </li>
+            <li class="nav-item">
+
+              <a class="nav-link " href="movies.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">aboutus</a>
+            </li>
+            <!--<li class="nav-item">
+            </li>-->
+            <!-- <li>
+              <li class="nav-item"> -->
+            <!-- Genre dropdown starts-->
+            <!-- <div>
+                <div class="dropdown"
+                  style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px;">
+                  <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                    onMouseOut="this.style.color='rgb(144,118,236)'">course</a> -->
+            <!--<button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                                    Genres
+                                </button>-->
+            <!-- <div class="dropdown-content" style="color:#fff">
+                    <a href="popular.html">singing course</a>
+                    <a href="crime.html">acting course</a>
+                    <a href="suspense.html">dance course</a>
+                    <a href="action.html">flimaking course </a>
+                    <a href="fantasy.html">costume desiging</a>
+                    <a href="documentary.html">set and property desiging</a>
+
+                  </div>
+                </div>
+              </div> -->
+            <!-- Genre dropdown ends-->
+            <!-- </li>
+
+            </li> -->
+            <li class="nav-item">
+              <!-- Genre dropdown starts -->
+              <div>
+                <div class="dropdown"
+                  style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+                  <a class="nav-link" href="#" onMouseOver="this.style.color='rgb(144,118,236)'"
+                    onMouseOut="this.style.color='rgb(144,118,236)'">Course</a>
+                  <div class="dropdown-content" style="color:#fff; ">
+                    {% for drop in dropdown %}
+                    <a href=" drop.url ">{{ drop.name }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <!-- Genre dropdown ends -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tv.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">bookmyshow</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='rgbrgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">ContactUs</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+              <li>
+                <button type="button" class="btn btn-light" onclick="logout()" onMouseOver="this.style.color='black'"
+                  onMouseOut="this.style.color='white'">login</button>
+              </li>
+            </div>
+          </ul>
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" style="background-color: rgb(144,118,236);" type="submit">Search</button>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar ends -->
+    <marquee>Welcome To <i>ApnaTheatre</i>.com<sup>&reg;</sup></marquee>
+
+    <div class="slider">
+
+
+      <div class="list">
+
+
+        {% for play in plays %}
+        <div class="item">
+          <img src="{{ play.image.url }}" alt="{{ play.title }}">
+
+          <div class="content">
+            <div class="title">{{ play.heading}}</div>
+            <div class="type"></div>
+            <div class="description">{{ play.descrip }}</div>
+            <div class="button">
+              <button> <a href="{{play.button_url}}">{{play.btn_text}}</a></button>
+              <!-- <button>"{{play.button_url}}"</button> -->
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!-- <div class="item">
+          <img src="../static/posters/thumbnail1.0.jpg" alt="">
+
+          <div class="content">
+            <div class="title">आदिती</div>
+            <div class="type"></div>
+            <div class="description">
+              हे नाटक टेलिव्हिजन रिॲलिटी शो आणि मुलांमधील नातेसंबंधांबद्दल बोलते. प्रत्येक मूल वेगळे असते आणि प्रत्येकजण दबाव सहन करू शकत नाही. हे सर्व मुलाच्या आयुष्यातील निरागसता आणि बालपण हिरावून घेते. हे नाटक रिॲलिटी शोच्या चकचकीत आणि वैभवात दडलेल्या मुद्द्यांवर प्रकाश टाकण्याचा प्रयत्न करते.
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="item">
+          <img src="../static/posters/poster11.jpg" alt="">
+
+          <div class="content">
+            <div class="title">भूमिका</div>
+            <div class="type"></div>
+            <div class="description">
+              ही कथा रंगभूमीचा सुपरस्टार चैतन्यभोवती फिरते, जो त्याच्या नवीन वास्तववादी अभिनय शैलीसाठी ओळखला जातो. त्याला 'रणमर्द' नावाच्या नाटकात एक भूमिका ऑफर करण्यात आली आहे, जे मिथक आणि अफवांनी वेढलेले आहे, जे नाटकाचा माजी अभिनेता, गुरुनाथ यांच्या स्टेजवरील अपघाती मृत्यूनंतर शापित आहे. चैतन्य हे आव्हान स्वीकारतो आणि पात्राला त्याच्या स्वत:च्या शैलीत जुळवून घेण्याचा प्रयत्न करतो, पण गुरुनाथच्या डायरीत आणि अभिनयाच्या तंत्राचा सखोल अभ्यास करताना तो स्वतःला हरवू लागतो आणि गुरुनाथसारखा बनतो. 
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div> -->
+        <!-- 
+        <div class="item">
+          <img src="../static/posters/poster-1.1.jpg" alt="">
+
+          <div class="content">
+            <div class="title">एका लग्नाची </div>
+            <div class="type">गोष्ट</div>
+            <div class="description">
+              घनश्याम आणि राधा या दोन अनोळखी व्यक्ती, ज्यांच्या आयुष्यात मोठी ध्येये आहेत, त्यांच्यावर लग्न करण्यासाठी दबाव टाकला जातो. ते लवकरच मार्ग ओलांडतात आणि त्यांच्या संबंधित कुटुंबांना फसवण्यासाठी एक वर्षाचा करार विवाह करण्यास सहमती देतात.
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="item"> -->
+        <!-- <img src="../static/posters/poster-5.jpg" alt="">
+
+          <div class="content">
+            <div class="title">मिट्टी की गाड़ी</div>
+            <div class="type"></div>
+            <div class="description">
+              प्राचीन क्लासिक "मृच्छकटिका" माती की गाडी (द लिटिल क्ले कार्ट) चे समकालीन स्टेजिंग हे शूद्रकाच्या तिसऱ्या शतकातील संस्कृत क्लासिक मृच्छकटिकावर आधारित समकालीन रंगमंच आहे. एका फॅसिस्ट शासकाने शासित असलेल्या प्राचीन शहर उजैनीमधील विविध सामाजिक आर्थिक आणि राजकीय परिस्थितींवर संगीतमय प्रकाश टाकला आहे. उठावाच्या उंबरठ्यावर असलेले शहर. वसंतसेनच्या थिरकणाऱ्या प्रेमकथेने एकत्र बांधले गेले
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../static/posters/poster10.0.jpg" alt="">
+
+          <div class="content">
+            <div class="title">नटसम्राट</div>
+            <div class="type"></div>
+            <div class="description">
+              निवृत्तीनंतर शेक्सपिअर अभिनेता गणपत बेलवलकर आपली मालमत्ता आपल्या दोन मुलांमध्ये वाटून घेतात. तथापि, त्यांच्या कृतघ्नपणामुळे गणपत आणि त्याची पत्नी वृद्धापकाळात बेघर होतात.
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="item">
+          <img src="../static/img/BLUE.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">अथर्व सुदामे</div>
+            <div class="type"></div>
+            <div class="description">
+              अथर्व सुदामे, आर्यक पाठक, रुचा जोशी या तीन अप्रतिम कलाकारांचा 90 मिनिटांचा आकर्षक परफॉर्मन्स
+            </div>
+            <div class="button">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div>-->
+
+      </div>
+
+
+      <div class="thumbnail">
+
+        {% for play in plays %}
+        <div class="item">
+          <img src="{{ play.image.url }}" alt="{{ play.descrip }}">
+        </div>
+        {% endfor %}
+
+        <!-- <div class="item">
+          <img src="../static/posters/down-1.jpg" alt="">
+        </div> -->
+        <!-- <div class="item">
+          <img src="../static/posters/DOWN-2N.jpg" alt="">
+        </div> -->
+        <!-- <div class="item">
+          <img src="../static/posters/down-3.jpg" alt="">
+        </div> -->
+        <!-- <div class="item">
+          <img src="../static/posters/down-4.jpg" alt="">
+        </div> -->
+        <!-- <div class="item">
+          <img src="../static/posters/down-5.jpg" alt="">
+        </div> -->
+        <!-- <div class="item">
+          <img src="../static/posters/down6.0.jpeg" alt="">
+        </div> -->
+
+      </div>
+
+
+      <div class="nextPrevArrows">
+        <button class="prev"><i class="fa-sharp fa-solid fa-arrow-left"></i> </button>
+        <button class="next"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+
+
+    <section>
+      <div class="photo-container two">
+        {% for photo in photos %}
+        <div class="parallax {{ photo.position }} {{ photo.speed }} {{ photo.size }}"
+          style="background-image:url('{{ photo.image.url }}')">
+        </div>
+        {% endfor %}
+
+        <!-- <div class="parallax left slower bottom"
+          style="background-image:url('../static/posters/guiter.jpg')">
+        </div> -->
+
+
+        <!-- <div class="parallax right lower50 medium top"
+          style="background-image:url('../static/posters/2photos.jpg')">
+        </div> -->
+      </div>
+
+      <div class="pp">
+        <ul>
+          {% for feature in features %}
+          <li>{{ feature.description }}</li>
+          {% endfor %}
+          <!-- <li>•	Gandharva Natyasanskaar provides specialized Tutors. </li>
+          <li>•	Gandharva Natyasanskaar tutors have an experience of 3+ years.</li>
+          <li>•	Easy and convenient online scheduling process.</li>
+          <li>•	Gandharva Natyasanskaar provides a chance to work with well known production houses.</li>
+          <li>•	Each student here is given special attention.</li> -->
+
+        </ul>
+        <br>
+        <button class="shadow__btn"><a href="">about us</a>
+      </div>
+      </button>
+
+
+    </section>
+
+
+    <!--card course section-->
+    <figure>
+      <ul class="cards">
+        {% for classcard in cards %}
+        <li class="cards__item">
+          <div class="card" style="width: 500px ; height: 500px;">
+            <div class="card__image "
+              style="background-image: url('{{ classcard.image_class.url }}'); background-size: cover;"></div>
+            <div class="card__content" style="height: 300px">
+              <div class="card__title">{{classcard.title}}</div>
+              <p class="card__text">{{ classcard.description}}</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+
+
+
+        <!-- <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--record"></div>
+            <div class="card__content">
+              <div class="card__title">{{cards.title}}</div>
+              <p class="card__text">
+                Our dance class specializes in teaching various types of dance, including ballet, Kathak, Bharatnatyam, hip-hop, and tap. We cater to different levels from beginners to advanced, offering a well-rounded dance education.</p>
+            
+            </div>
+          </div>
+        </li> -->
+        <!-- <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--drag"></div>
+            <div class="card__content">
+              <div class="card__title">FILM MAKING</div>
+              <p class="card__text">
+                Our filmmaking class offers hands-on instruction in all aspects of filmmaking, from conceptualization to post-production. Students learn scriptwriting, camera operation, lighting techniques, sound recording, editing, and more. The class emphasizes practical experience through projects that allow students to apply their skills and creativity in a collaborative environment. It's designed for aspiring filmmakers of all levels who want to develop their storytelling abilities and technical proficiency in filmmaking.</p>
+
+            </div>
+          </div>
+        </li> -->
+        <!-- <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--look"></div>
+            <div class="card__content">
+              <div class="card__title">COUSTUME DESIGNING</div>
+              <p class="card__text">
+                Our costume making class focuses on teaching the art and techniques of creating costumes for various purposes, including theater productions, film, cosplay, and historical reenactments. Students learn sewing skills, pattern drafting, fabric selection, costume design principles, and embellishment techniques. The class caters to both beginners and those with prior experience in sewing, aiming to develop creativity and craftsmanship in costume design.</p>
+
+            </div>
+          </div>
+        </li> -->
+        <!-- <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--flowers"></div>
+            <div class="card__content">
+              <div class="card__title">SET & PROPERTY DESIGNING</div>
+              <p class="card__text">
+                Our set making class is designed to teach the skills and techniques necessary to construct sets for theater productions, film, or other visual media. Students learn about set design principles, materials selection, construction methods, and the practical aspects of building and decorating sets. The class provides hands-on experience with tools and materials commonly used in set construction, fostering creativity and problem-solving skills in creating immersive environments for performances or productions. It accommodates various skill levels, from beginners to those with prior experience in carpentry or set design.</p>
+
+            </div>
+          </div>
+        </li> -->
+      </ul>
+      <div class="c-btn">
+        <button class="card__btn"><a href="">view more</a>
+      </div>
+    </figure>
+
+
+
+    <!-- faq qustions-->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+
+    <div class="faq-section" class="faq-box">
+      <h2 style="color: black; text-align: center; background-color:rgb(144,118,236); gap: 10px;" class="our-faq">Frequently Asked
+        Questions</h2>
+      <details open>
+        <summary align="center">Do you have instalment option ?</summary>
+        <div class="faq__content">
+          <p> Yes, we also provide instalment option.</p>
+          <p></p>
+        </div>
+      </details>
+      <br>
+      <br>
+      <details>
+        <summary align="center">Is there any transport service for drama classes provided by you ?</summary>
+        <div class="faq__content">
+          <p>NO We do not provide transport service. </p>
+        </div>
+      </details>
+      <br>
+      <br>
+      <details>
+        <summary align="center"> What are the competitions your institute take part in ?</summary>
+        <div class="faq__content">
+          <p> Trere are various compitions our institute take part in such as - Ferodya ,Napurgandha ,yuva spandan etc..
+          </p>
+        </div>
+      </details>
+      <br>
+      <br>
+      <details>
+        <summary align="center">Does your institute has any tie-up with any production house ?
+        </summary>
+        <div class="faq__content">
+          <p>Yes our institute has tie-up with many production houses , judging by the students performances and skills
+            they are selected to work with them. </p>
+        </div>
+      </details>
+      <br>
+      <br>
+      <details>
+        <summary align="center"> Will your institute provide internship for students ?</summary>
+        <div class="faq__content">
+          <p>Yes our institute has tie-up with many production houses , judging by the students performances and skills
+            they are selected to work with them.</p>
+        </div>
+      </details>
+      <br>
+      <br>
+      <details>
+        <summary align="center">What is the time period of your courses ?
+        </summary>
+        <div class="faq__content">
+          <p>We have a varity of courses ,the time period of an course varies differently ,but basicly all our courses
+            are between 3 months to 1 year. </p>
+        </div>
+      </details>
+      <br>
+      </details>
+    </div>
+
+    <figure>
+      <h1 class="our-partners">our placements </h1>
+      <div class="logos">
+        <div class="logo_items">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+        </div>
+      </div>
+    </figure>
+
+    <style>
+      @keyframes slides {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      .logos {
+        overflow: hidden;
+        padding: 30px 0px;
+        white-space: nowrap;
+        position: relative;
+      }
+      .our-partners{
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+        text-transform: capitalize;
+        color:  rgb(144, 118, 236);
+      }
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 250px;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(33, 32, 32));
+      }
+
+      .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(33, 32, 32));
+      }
+
+      .logo_items {
+        display: flex;
+        animation: 35s slides infinite linear;
+        max-height: 100px;
+        width: 100%;
+        gap: 2rem;
+      }
+      .logo_items>img:hover{
+        zoom: 1.1;
+        align-self: center;
+        border-width: 4px;
+        border-color:  rgb(144, 118, 236);
+        -webkit-filter: grayscale(1) brightness(100) saturate(100%);
+        filter: grayscale(1) brightness(100) saturate(100%);
+      }
+
+
+      .logos:hover .logo_items {
+        animation-play-state: paused;
+      }
+
+      .logo_items img {
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+        width: auto;
+        height: 100px;
+      }
+      
+    </style>
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+      <hr class="footer-hr">
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="#"><img class="footer-logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30"
+              height="24"></a>
+          <p class="footer-bottom-tagline"></p>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Follow Us</h2>
+          <ul class="footer-middle-list icons">
+            <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f facebook" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                class="fab fa-twitter twitter" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                class="fab fa-linkedin linkedin" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                class="fab fa-instagram instagram" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website" target="_blank"><i
+                class="fab fa-github github" style="color:rgb(144,118,236)"></i></a>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">course</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item"><a href="home.html">Acting Course</a> </li>
+            <li class="footer-middle-list-item"><a href="web-series.html">Singing Course</a> </li>
+            <li class="footer-middle-list-item"><a href="kids.html">Dance Course</a> </li>
+            <li class="footer-middle-list-item"><a href="news.html">Flimmaking Course</a> </li>
+            <li class="footer-middle-list-item"><a href="premium.html">Costume Desiging</a> </li>
+            <li class="footer-middle-list-item"><a href="faq.html">Set And Property Designing</a> </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">QUICK LINKS</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item"><a href="home.html">Home</a> </li>
+            <li class="footer-middle-list-item"><a href="web-series.html">aboutus</a> </li>
+            <li class="footer-middle-list-item"><a href="kids.html">course</a> </li>
+            <li class="footer-middle-list-item"><a href="news.html">plays</a> </li>
+            <li class="footer-middle-list-item"><a href="premium.html">Contact Us</a> </li>
+            <li class="footer-middle-list-item"><a href="faq.html">Log In</a> </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Try Our App</h2>
+          <ul class="footer-middle-list icons">
+            <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:rgb(144,118,236)"></i></a>
+            <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color: rgb(144,118,236)"></i></a>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-links">
+          <h2 class="footer-heading">Contact Us</h2>
+          <p class="footer-bottom-tagline"></p>
+          <a class="footer-contact-button" href="contactus.html">Contact</a>
+          </p>
+        </div>
+      </div>
+      <!-- <hr class="footer-hr">
+        <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Under ApnaTheatre.com :
+          </p> -->
+  </div>
+  </footer>
+
+  <!----------------------scroll back to top button-->
+  <button id="scrollToTopButton" title="Go to top">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </button>
+  <script>
+    $(document).ready(function () {
+      var scrollTopButton = document.getElementById("scrollToTopButton");
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      }
+
+      $("#scrollToTopButton").click(function () {
+        $('html ,body').animate({ scrollTop: 0 }, 800)
+      });
+    });
+  </script>
+
+  <!-- footer scripts -->
+
+
+
+
+  <script>
+    jQuery('#waterdrop').raindrops({
+      color: '#292c2f',
+      canvasHeight: 150,
+      density: 0.1,
+      frequency: 20
+    });
+  </script>
+  <script>
+    function logout() {
+      window.location.replace("login.html");
+    }
+  </script>
+  <!-- photo container-->
+  <script>
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      $(".parallax.faster").css("transform", "translateY(" + (scroll / 3) + "px)");
+      $(".parallax.slower").css("transform", "translateY(" + (scroll / 2.5) + "px)");
+      $(".parallax.medium").css("transform", "translateY(" + (scroll / 2.8) + "px)");
+    });
+  </script>
+  <!-- bootsstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="../static/js/script.js"></script>
+  <script src="../static/js/cardslider.js"></script>
+
+</body>
+
+</html>

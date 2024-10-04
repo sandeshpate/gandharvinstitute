@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <link rel="shortcut icon" href="img/Naatyasanskaar.png" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fontawesome.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!--main css-->
+  <link href="../static/css/course.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  
+
+
+
+
+</head>
+
+<style>
+  /* new course workshp page */
+
+
+.section-box {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0.3));
+  /* background-size: cover;
+  background-position: center; */
+  /* overflow: hidden; */
+}
+
+.theatre {
+  color: #ffd700;
+  font-weight: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+               4px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: perspective(500px) rotateX(15deg);
+  margin-bottom: 50px;
+}
+
+.container-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-box .text-box {
+  max-width: 600px;
+}
+
+.container-box .text-box h2 {
+  color: #ff8c00;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.container-box .text-box h2 span {
+  color: #ffd700;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.container-box .text-box p {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.date-time {
+  margin-bottom: 20px;
+}
+
+.date-time-btn {
+  justify-content:space-around;
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff8c00, #ff6347);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.date-time-btn:hover {
+  background: linear-gradient(45deg, #ff6347, #ff8c00);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.learn-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: linear-gradient(45deg, #ffd700, #ff6347);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.learn-more:hover {
+  background: linear-gradient(45deg, #ff6347, #ffd700);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-box .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  height: 700px;
+  width: 700px;
+}
+
+.container-box .img-box img.main-image {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 8px solid #ffd700;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-box .img-box img.main-image:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumb-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumb-box li {
+  list-style: none;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumb-box li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumb-box li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 15%;
+  object-fit: cover;
+  border: 4px solid #ffd700;
+}
+
+.social-box {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-box li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.social-box li a {
+  display: inline-block;
+  transform: scale(0.8);
+  transition: transform 0.3s, filter 0.3s;
+  filter: invert(1);
+}
+
+.social-box li a:hover {
+  transform: scale(1);
+  filter: invert(0.7);
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: #ffd700;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+</style>
+
+
+<!------------------------Scroll to top button------------------------------------------------>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px rgb(144,118,236) !important;
+
+  }
+
+  .buddy {
+    cursor: pointer;
+  }
+
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144,118,236);
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  #scrollToTopButton:hover,
+  i:hover {
+    background-color: white;
+    color: rgb(144,118,236);
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #navbarNav.nav-item.nav-link a:hover {
+    color: rgb(144,118,236);
+  }
+
+  .nav-link:hover {
+    color: rgb(144,118,236);
+  }
+
+  .nav-item :hover {
+    margin-bottom: 10px;
+
+
+  }
+
+  #header-nav .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(144,118,236);
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Add transition effect */
+    text-shadow: 0 0 10px rgb(144,118,236);
+    /* Add glowing effect */
+  }
+</style>
+
+
+
+
+</script>
+
+
+<body>
+
+
+
+  <div class="scroll-bar">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30"
+            height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#8b1500" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active s" aria-current="page" href="home.html"
+                onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="movies.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">aboutus</a>
+            </li>
+            <li class="nav-item">
+              <!-- Genre dropdown starts-->
+              <div>
+                <div class="dropdown"
+                  style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px;">
+                  <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                    onMouseOut="this.style.color='rgb(144,118,236)'">course</a>
+                  <!--<button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                                    Genres
+                                </button>-->
+                                <div class="dropdown-content" style="color:#fff; ">
+                                  {% for drop in coursedrop  %}
+                                      <a href=" {{drop.url }}">{{ drop.name }}</a>
+                                  {% endfor %}
+                              </div>
+                </div>
+            
+              </div>
+            </li>
+              <!-- Genre dropdown ends-->
+            
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tv.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">bookmyshow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="premium.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">premium</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='rgb(144,118,236)'"
+                onMouseOut="this.style.color='rgb(144,118,236)'">ContactUs</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+              <li>
+                <button style="background-color: rgb(0, 213, 255);" type="button" class="btn btn-light"
+                  onclick="logout()" onMouseOver="this.style.color='black'"
+                  onMouseOut="this.style.color='white'">login</button>
+              </li>
+            </div>
+          </ul>
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" type="submit">Search</button>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar ends -->
+    <!-- <marquee>Welcome To <i>ApnaTheatre</i>.com<sup>&reg;</sup></marquee> -->
+
+
+
+
+ 
+      <section class="home">
+        <div class="description">
+
+          {% for content in course_contents %}
+          <h1 class="title">
+              <span class="gradient-text">{{ content.subtitle }}</span> {{ content.title }}
+          </h1>
+          <p class="paragraph">
+              {{ content.paragraph }}
+          </p>
+      {% endfor %}
+          <!-- <h1 class="title">
+            <span class="gradient-text">Grow Professionally</span> with the Best
+          </h1>
+          <p class="paragraph">
+            In a world filled with opportunities, having a mentor can make all the
+            difference. Explore why people turn to this invaluable resource to
+            unlock their potential.
+          </p> -->
+          <!-- <form id="form" autocomplete="off">
+        
+            
+            <input
+              type="email"
+              id="email-id"
+              name="email_address"
+              aria-label="email adress"
+              placeholder=""
+              required
+              oninput="checkEmpty()" /> -->
+             
+              
+            <button type="submit" class="btn" aria-label="submit">
+              <span>register Now</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            
+            </button>
+          <!-- </form> -->
+        </div>
+  
+        <div class="users-color-container">
+
+          {% for content in course_contents %}
+          <span class="item" style="--i: {{ forloop.counter }}"></span>
+          <img class="item" style="width: 140px; height: 140px; " src="{{ content.image_url.url }}" style="--i: {{ content.order_index }}" alt="{{ content.alt_text }}" />
+      {% endfor %}
+      <!-- {% for content in course_contents %}
+        <span class="item" style="--i: {{ forloop.counter }}11"></span>
+          <img class="item" style="width: 140px; height: 140px;"src="{{ content.image_url.url }}" style="--i: {{ content.order_index }}12" alt="{{ content.alt_text }}" />
+          <span class="item" style="--i: 5{{ content.order_index }}"></span>
+          {% endfor %} -->
+          <!-- <span class="item" style="--i: 1"></span>
+          <img
+            class="item"
+            src="posters/2photos.jpg"
+            style="--i: 2"
+            alt="" /> -->
+          <!-- <span class="item" style="--i: 3"></span>
+          <img
+            class="item"
+            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b8a14493-3d9f-4b9b-b93a-56d0bc7243e9"
+            style="--i: 4"
+            alt="" /> -->
+  
+          <!-- <img
+            class="item"
+            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/03e51e1e-9750-45a5-b75e-a1e341d4562a"
+            style="--i: 10"
+            alt="" /> -->
+          <!-- <span class="item" style="--i: 11"></span>
+          <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5eb50f89-3e5a-480e-860c-8d40d3ba9ffe" style="--i: 12" alt="" />
+          <span class="item" style="--i: 5"></span>
+   -->
+          <!-- <span class="item" style="--i: 9"></span>
+          <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/86c71a79-2efe-4567-8665-b1e5a1fd9735" style="--i: 8" alt="" />
+          <span class="item" style="--i: 7"></span>
+          <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/97ef9643-5202-41aa-80f0-ceeabccdd099" style="--i: 6" alt="" />
+        </div> -->
+        </div>
+      </section>
+    <!-- feture card-->
+     <div class="logo-move">
+    <h1>our feature</h1>
+    </div>
+      <section>
+        
+      <div class="container-logo">
+
+
+        {% for card in course_cards %}
+        <div class="card-logo">
+            <div class="box-logo">
+                <div class="content-logo">
+                    <h2>{{ card.number|add:"0"|slice:"-2:" }}</h2>
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                    <a href="{{ card.link }}">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+   </div>
+
+<section>
+
+
+
+
+
+
+  
+<!-- workshop new page-->
+
+<section class="section-box">
+ 
+  <h1 class="theatre">{{ workshop.title }}</h1>
+  <div class="container-box">
+      <div class="text-box">
+          <h2>{{ workshop.subtitle }}</h2>
+          <p>{{ workshop.description }}</p>
+          <div class="date-time">
+              <button class="date-time-btn"><strong>Date:</strong> {{ workshop.date }}</button>
+              <button class="date-time-btn"><strong>Time:</strong> {{ workshop.time }}</button>
+              <button class="date-time-btn"><strong>Place:</strong> {{ workshop.place }}</button>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+      </div>
+      <div class="img-box">
+          <img src="{{ workshop.main_image.url }}" class="main-image" alt="{{ workshop.title }}">
+      </div>
+  </div>
+  <ul class="thumb-box">
+      <li><img src="{{ workshop.thumbnail1.url }}" class="thumb1" onclick="imgSlider('{{ workshop.thumbnail1.url }}');changeCircleColor('#017143')"></li>
+      <li><img src="{{ workshop.thumbnail2.url }}" class="thumb2" onclick="imgSlider('{{ workshop.thumbnail2.url }}');changeCircleColor('#0eb495')"></li>
+      <li><img src="{{ workshop.thumbnail3.url }}" class="thumb3" onclick="imgSlider('{{ workshop.thumbnail3.url }}');changeCircleColor('#d752b1')"></li>
+  </ul>
+  <ul class="social-box">
+      <li><a href="#"><img src="{{ workshop.facebook_icon }}" alt="Facebook"></a></li>
+      <li><a href="#"><img src="{{ workshop.instagram_icon }}" alt="Instagram"></a></li>
+      <li><a href="#"><img src="{{ workshop.twitter_icon }}" alt="Twitter"></a></li>
+  </ul>
+</section>
+
+  
+
+<!-- 
+        - #COURSE
+      -->
+      
+      <section>
+        <div class="logo-div">
+          <h1>Our Services</h1>
+        </div>
+        <div class="card-container">
+          
+          <!-- Row 1 -->
+          <div class="card-container">
+            <!-- Dynamic Service Cards -->
+            {% for service in services %}
+            <div class="service-card">
+                <div class="card-image" style="background-image: url('{{ service.image.url }}');"></div>
+                <h2>{{ service.title }}</h2>
+                <p>{{ service.description }}</p>
+                <button class="btn fill"><a href="{{ service.link }}">Learn More</a></button>
+            </div>
+            {% endfor %}
+        </div>
+          <!-- <div  class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 1</h2>
+            <p>We offer comprehensive solutions tailored to your needs. Our team is dedicated to providing exceptional service and support.</p>
+           
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 2</h2>
+            <p>Our innovative approach ensures high-quality results. Experience top-notch services designed to meet your expectations.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 3</h2>
+            <p>We provide expert guidance and solutions to help you achieve your goals. Discover the benefits of working with us.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 4</h2>
+            <p>Enhance your business with our tailored services. Our expertise ensures efficient and effective solutions for all your needs.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          
+          <!-- Row 2 -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 5</h2>
+            <p>Explore our range of services designed to drive success. We are committed to delivering quality and excellence in every project.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div  class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 6</h2>
+            <p>Partner with us for innovative solutions and dedicated support. Our team is here to help you achieve outstanding results.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 7</h2>
+            <p>Benefit from our expertise and experience in delivering exceptional services. We are here to assist you every step of the way.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+          <!-- <div class="service-card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/300');"></div>
+            <h2>Service 8</h2>
+            <p>Achieve your business goals with our comprehensive solutions. We provide tailored services to meet your unique needs.</p>
+            <button class="btn fill"><a href="#">Learn More</a></button>
+        
+          </div> -->
+        </div>
+      </section>
+      
+
+    
+      
+      
+
+   
+       
+<style>
+  /* Section Styles */
+.logo-div h1 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+  animation: text-animate 3s infinite;
+}
+
+/* Text Animation */
+@keyframes text-animate {
+  0% { letter-spacing: 3px; }
+  50% { letter-spacing: 10px; }
+  100% { letter-spacing: 3px; }
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Service Card */
+.service-card {
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:active {
+  transform: translateY(-20px);
+}
+
+/* Card Image */
+.card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Card Heading */
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  /* transition: color 0.3s ease; */
+}
+
+.service-card:hover h2 {
+  color: red;
+}
+
+/* Card Text */
+.service-card p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Button */
+.btn.fill {
+  
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  background: rgba(17, 25, 40, 0.25);
+  
+  color: #fff;
+  font-weight: bold;
+ 
+}
+
+.btn.fill:hover {
+  background: rgba(0, 212, 255, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+</style>      
+     
+
+        <!-------------------------------Footer-------------------------------->
+        <footer class="footer">
+          <hr class="footer-hr">
+          <div class="footer-content">
+            <div class="footer-left">
+              <a href="#"><img class="footer-logo" src="../static/posters/Gandharva (1) new.png" alt="" width="30" height="24"></a>
+              <p class="footer-bottom-tagline"></p>
+            </div>
+            <div class="footer-middle">
+              <h2 class="footer-heading">Follow Us</h2>
+              <ul class="footer-middle-list icons">
+                <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                    class="fab fa-facebook-f facebook" style="color:rgb(144,118,236)"></i></a>
+                <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                    class="fab fa-twitter twitter" style="color:rgb(144,118,236)"></i></a>
+                <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                    class="fab fa-linkedin linkedin" style="color:rgb(144,118,236)"></i></a>
+                <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                    class="fab fa-instagram instagram" style="color:rgb(144,118,236)"></i></a>
+                <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website"
+                  target="_blank"><i class="fab fa-github github" style="color:rgb(144,118,236)"></i></a>
+              </ul>
+            </div>
+            <div class="footer-middle">
+              <h2 class="footer-heading">course</h2>
+              <ul class="footer-middle-list">
+                <li class="footer-middle-list-item"><a href="home.html">Acting Course</a> </li>
+                <li class="footer-middle-list-item"><a href="web-series.html">Singing Course</a> </li>
+                <li class="footer-middle-list-item"><a href="kids.html">Dance Course</a> </li>
+                <li class="footer-middle-list-item"><a href="news.html">Flimmaking Course</a> </li>
+                <li class="footer-middle-list-item"><a href="premium.html">Costume Desiging</a> </li>
+                <li class="footer-middle-list-item"><a href="faq.html">Set And Property Designing</a> </li>
+              </ul>
+            </div>
+            <div class="footer-middle">
+              <h2 class="footer-heading">QUICK LINKS</h2>
+              <ul class="footer-middle-list">
+                <li class="footer-middle-list-item"><a href="home.html">Home</a> </li>
+                <li class="footer-middle-list-item"><a href="web-series.html">aboutus</a> </li>
+                <li class="footer-middle-list-item"><a href="kids.html">course</a> </li>
+                <li class="footer-middle-list-item"><a href="news.html">plays</a> </li>
+                <li class="footer-middle-list-item"><a href="premium.html">Contact Us</a> </li>
+                <li class="footer-middle-list-item"><a href="faq.html">Log In</a> </li>
+              </ul>
+            </div>
+            <div class="footer-middle">
+              <h2 class="footer-heading">Try Our App</h2>
+              <ul class="footer-middle-list icons">
+                <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:rgb(144,118,236)"></i></a>
+                <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color: rgb(144,118,236)"></i></a>
+              </ul>
+            </div>
+            <div class="footer-right">
+              <p class="footer-links">
+              <h2 class="footer-heading">Contact Us</h2>
+              <p class="footer-bottom-tagline"></p>
+              <a class="footer-contact-button" href="contactus.html">Contact</a>
+              </p>
+            </div>
+          </div>
+          <!-- <hr class="footer-hr">
+          <div class="footer-copyright">
+            <p>Copyright &copy; and &reg; Since
+              <script>
+                document.write(new Date().getFullYear())
+              </script> Under ApnaTheatre.com :
+            </p> -->
+          </div>
+        </footer>
+
+       <!-- --------------------scroll back to top button-->
+        <button id="scrollToTopButton" title="Go to top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+      <script>
+        $(document).ready(function () {
+          var scrollTopButton = document.getElementById("scrollToTopButton");
+          window.onscroll = function () { scrollFunction() };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollTopButton.style.display = "block";
+            } else {
+              scrollTopButton.style.display = "none";
+            }
+          }
+
+          $("#scrollToTopButton").click(function () {
+            $('html ,body').animate({ scrollTop: 0 }, 800)
+          });
+        });
+      </script>
+
+      <!-- footer scripts -->
+
+
+
+<!--course slider script-->
+
+
+
+
+      <!-- <script>
+        jQuery('#waterdrop').raindrops({
+          color: '#292c2f',
+          canvasHeight: 150,
+          density: 0.1,
+          frequency: 20
+        });
+      </script> -->
+      <script>
+        function logout() {
+          window.location.replace("login.html");
+        }
+      </script>
+     
+      <!-- bootsstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+      <script src="../static/js/script.js"></script>
+      <script src="../static/js/course.js"></script>
+      <!-- <script src="js/cardslider.js"></script> -->
+
+</body>
+
+</html>

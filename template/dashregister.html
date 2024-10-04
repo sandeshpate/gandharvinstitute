@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>register</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../static/css/dashstyle.css">
+
+
+ 
+
+</head>
+<body>
+
+   <header class="header">
+   
+      <section class="flex">
+   
+         <a class="navbar-brand" href="home.html"><img class="logo" src="posters/Gandharva (1) new.png" alt="" width="100px"
+            height="200px"></a>
+   
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name"> {{request.user}}</h3>
+            <p class="role">student</p>
+            <a href="dashprofile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="/login" class="option-btn">logout</a>
+               <a href="dashregister.html" class="option-btn">register</a>
+            </div>
+         </div>
+   
+      </section>
+   
+   </header>   
+   
+   <div class="side-bar">
+   
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name"> {{request.user}}</h3>
+         <p class="role">student</p>
+         <a href="/dashprofile" class="btn">view profile</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="/dash"><i class="fas fa-home"></i><span>dashboard</span></a>
+         <a href="/dashcourse"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+         <a href="/dashregister"><i class="fas fa-question"></i><span>registration</span></a>
+         <a href="/dashtrainer"><i class="fas fa-chalkboard-user"></i><span>trainers</span></a>
+         <a href="/dashhelp"><i class="fas fa-chalkboard-user"></i><span>help and supports</span></a>
+         <a href="/login"><i class="fas fa-headset"></i><span>logout</span></a>
+      </nav>
+   
+   </div>
+   
+<!-- <section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>register now</h3>
+      <p>your name <span>*</span></p>
+      <input type="text" name="name" placeholder="enter your name" required maxlength="50" class="box">
+      <p>your email <span>*</span></p>
+      <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
+      <p>your password <span>*</span></p>
+      <input type="password" name="pass" placeholder="enter your password" required maxlength="20" class="box">
+      <p>confirm password <span>*</span></p>
+      <input type="password" name="c_pass" placeholder="confirm your password" required maxlength="20" class="box">
+      <p>select profile <span>*</span></p>
+      <input type="file" accept="image/*" required class="box">
+      <input type="submit" value="register new" name="submit" class="btn">
+   </form>
+
+</section> -->
+
+
+<section class="logo-co">
+<div class="form-container-co">
+    <h1 class="main-heading-co">Admission Form ✨</h1>
+    <p class="line"></p>
+
+   
+    <form method="post" action="{% url 'dashregister' %}" id="admissionForm">
+        {% csrf_token %}
+        <!-- Step 1: Personal & Parent Details -->
+        <div class="step" id="step1">
+            <h2>Personal Details</h2>
+            <p class="line"></p>
+            <input type="text" placeholder="First Name" id="firstName"  name=" first_name"required> 
+            <input type="text" placeholder="Last Name" id="lastName"  name=" last_name" required>
+            <input type="date" placeholder="Date of Birth" id="dob" name="  dob" required>
+            <select id="gender"  name="gender" required>
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="tel" placeholder="Contact Number" id="contact"  name="contact" required>
+            <input type="email" placeholder="Email" id="email"  name="email"  required>
+
+            <h2>Parent Details</h2>
+            <p class="line"></p>
+            <input type="text" placeholder="Father's Full Name" id="fatherName" name="father_name" required>
+            <input type="text" placeholder="Father's Occupation" id="fatherOccupation" name="father_occupation" required>
+            <input type="tel" placeholder="Father's Mobile Number" id="fatherMobile" name="father_mobile" required>
+            <input type="text" placeholder="Mother's Full Name" id="motherName" name=" mother_name" required>
+            <input type="text" placeholder="Mother's Occupation" id="motherOccupation" name=" mother_occupation" required>
+            <input type="tel" placeholder="Mother's Mobile Number" id="motherMobile" name="mother_mobile" required>
+
+            <button type="button" class="button-co"  onclick="validateStep1()">Next</button>
+        </div>
+
+        <!-- Step 2: Address Details -->
+        <div class="step" id="step2" style="display: none;">
+            <h2>Address Details</h2>
+            <p class="line"></p>
+            <input type="text" placeholder="Permanent Address" id="permanentAddress" name="permanent_address" required>
+            <input type="text" placeholder="Temporary Address" id="temporaryAddress" name=" temporary_address">
+            <input type="text" placeholder="Street Address" id="streetAddress" name=" street_address" required>
+            <input type="text" placeholder="Pincode" id="pincode"  name=" pincode" required>
+            <input type="text" placeholder="State" id="state" name="state" required>
+            <input type="text" placeholder="City" id="city" name="city" required>
+            <input type="text" placeholder="Country" id="country" name="country" required>
+
+            <button type="button" class="button-co" onclick="validateStep2()">Next</button>
+            <button type="button" class="button-co"  onclick="prevStep(1)">Back</button>
+        </div> 
+
+        <!-- Step 3: Academic Details -->
+         <div class="step" id="step3" style="display: none;">
+            <h2>Academic Details</h2>
+            <p class="line"></p>
+            <input type="text" placeholder="Previous School/College Name" id="previousSchool" name="  previous_school" required>
+            <input type="text" placeholder="Last Qualification" id="qualification" name=" qualification" required>
+            <input type="text" placeholder="Degree Name" id="degreeName" name="  degree_name" required>
+
+            <button type="button" class="button-co" onclick="validateStep3()">Next</button>
+            <button type="button"  class="button-co" onclick="prevStep(2)">Back</button>
+        </div>
+
+        <!-- Step 4: Drama Background Information -->
+        <div class="step" id="step4" style="display: none;">
+            <h2>Drama Background Information</h2>
+            <p class="line"></p>
+            <textarea placeholder="Previous Training in Drama" id="previousTraining" name="previous_training"></textarea>
+            <textarea placeholder="Theatre Experience" id="theatreExperience" name="theatre_experience"></textarea>
+            <textarea placeholder="Performance Experience" id="performanceExperience" name="performance_experience"></textarea>
+            <textarea placeholder="Special Skills (Dance, Music, etc.)" id="specialSkills" name="special_skills"></textarea>
+            <textarea placeholder="Participation in any Acting Group or Societies" id="actingGroup" name=" acting_group"></textarea>
+
+            <button type="button" class="button-co"  onclick="nextStep(5)">Next</button>
+            <button type="button" class="button-co" onclick="prevStep(3)">Back</button>
+        </div>
+
+        <!-- Step 5: Course Selection -->
+        <div class="step" id="step5" style="display: none;">
+            <h2>Course Selection</h2>
+            <p class="line"></p>
+            <select id="desiredCourse" name="desired_course" required>
+                <option value="">Select Desired Course</option>
+                <option value="Acting">Acting</option>
+                <option value="Set Designing">Set Designing</option>
+                <option value="Costume Designing">Costume Designing</option>
+                <option value="Singing">Singing</option>
+                <option value="Dancing">Dancing</option>
+            </select>
+            <select id="experienceLevel" name="experience_level" required>
+                <option value="">Experience Level</option>
+                <option value="Basic">Basic</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <button type="button" class="button-co" onclick="validateStep5()">Next</button>
+            <button type="button" class="button-co" onclick="prevStep(4)">Back</button>
+        </div>
+
+        <!-- Step 6: Document Upload -->
+        <div class="step" id="step6" style="display: none;">
+            <h2>Document Upload</h2>
+            <p class="line"></p>
+            <label for="photo">please upload a passport-sized photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required> 
+            <label for="dramaCertificate">please upload a signuture</label>
+            <input type="file" id="dramaCertificate" name=" drama_certificate" accept="application/pdf,image/*"required>
+
+            <button type="button" class="button-co" onclick="validateStep6()">Next</button>
+            <button type="button" class="button-co" onclick="prevStep(5)">Back</button>
+        </div>
+
+        <!-- Step 7: Submission -->
+        <div class="step" id="step7" style="display: none;">
+            <h2>Submit Your Application form </h2>
+            <p class="line"></p>
+            <div class="terms-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+                
+            </div>
+            <button type="submit" class="button-co" >Submit</button>
+        </div>
+    </form>
+    <p id="successMessage" style="display: none;" class="sucessmessage">Your application is approved! 🎉</p>
+
+</div>
+</section>
+
+ <!-- <section class="logo-co"> 
+    <div class="form-container-co">
+        <h1 class="main-heading-co">Admission Form ✨</h1>
+        <p class="line"></p>
+
+        <form method="post" action="{% url 'dashregister' %}" id="admissionForm">
+            {% csrf_token %}
+            <!- Step 1: Personal & Parent Details -->
+            <!-- <div class="step" id="step1">
+                <h2>Personal Details</h2>
+                <p class="line"></p>
+                <input type="text" name="first_name" placeholder="First Name" required> 
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+                <select name="gender" required>
+                    <option value="">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="tel" name="contact" placeholder="Contact Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <h2>Parent Details</h2>
+                <p class="line"></p>
+                <input type="text" name="father_name" placeholder="Father's Full Name" required>
+                <input type="text" name="father_occupation" placeholder="Father's Occupation" required>
+                <input type="tel" name="father_mobile" placeholder="Father's Mobile Number" required>
+                <input type="text" name="mother_name" placeholder="Mother's Full Name" required>
+                <input type="text" name="mother_occupation" placeholder="Mother's Occupation" required>
+                <input type="tel" name="mother_mobile" placeholder="Mother's Mobile Number" required>
+
+                <button type="button" class="button-co" onclick="nextStep(1)">Next</button>
+            </div> -->
+
+            <!-- Step 2: Address Details -->
+            <!-- <div class="step" id="step2" style="display: none;">
+                <h2>Address Details</h2>
+                <p class="line"></p>
+                <input type="text" name="permanent_address" placeholder="Permanent Address" required>
+                <input type="text" name="temporary_address" placeholder="Temporary Address">
+                <input type="text" name="street_address" placeholder="Street Address" required>
+                <input type="text" name="pincode" placeholder="Pincode" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="country" placeholder="Country" required>
+
+                <button type="button" class="button-co" onclick="nextStep(2)">Next</button>
+                <button type="button" class="button-co" onclick="prevStep(1)">Back</button>
+            </div> -->
+
+            <!-- Step 3: Academic Details -->
+            <!-- <div class="step" id="step3" style="display: none;">
+                <h2>Academic Details</h2>
+                <p class="line"></p>
+                <input type="text" name="previous_school" placeholder="Previous School/College Name" required>
+                <input type="text" name="qualification" placeholder="Last Qualification" required>
+                <input type="text" name="degree_name" placeholder="Degree Name" required>
+
+                <button type="button" class="button-co" onclick="nextStep(3)">Next</button>
+                <button type="button" class="button-co" onclick="prevStep(2)">Back</button>
+            </div> -->
+
+            <!-- Step 4: Drama Background Information -->
+            <!-- <div class="step" id="step4" style="display: none;">
+                <h2>Drama Background Information</h2>
+                <p class="line"></p>
+                <textarea name="previous_training" placeholder="Previous Training in Drama"></textarea>
+                <textarea name="theatre_experience" placeholder="Theatre Experience"></textarea>
+                <textarea name="performance_experience" placeholder="Performance Experience"></textarea>
+                <textarea name="special_skills" placeholder="Special Skills (Dance, Music, etc.)"></textarea>
+                <textarea name="acting_group" placeholder="Participation in any Acting Group or Societies"></textarea>
+
+                <button type="button" class="button-co" onclick="nextStep(4)">Next</button>
+                <button type="button" class="button-co" onclick="prevStep(3)">Back</button>
+            </div> -->
+
+            <!-- Step 5: Course Selection -->
+            <!-- <div class="step" id="step5" style="display: none;">
+                <h2>Course Selection</h2>
+                <p class="line"></p>
+                <select name="desired_course" required>
+                    <option value="">Select Desired Course</option>
+                    <option value="Acting">Acting</option>
+                    <option value="Set Designing">Set Designing</option>
+                    <option value="Costume Designing">Costume Designing</option>
+                    <option value="Singing">Singing</option>
+                    <option value="Dancing">Dancing</option>
+                </select>
+                <select name="experience_level" required>
+                    <option value="">Experience Level</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <button type="button" class="button-co" onclick="nextStep(5)">Next</button>
+                <button type="button" class="button-co" onclick="prevStep(4)">Back</button>
+            </div> -->
+
+            <!-- Step 6: Document Upload -->
+            <!-- <div class="step" id="step6" style="display: none;">
+                <h2>Document Upload</h2>
+                <p class="line"></p>
+                <label for="photo">Please upload a passport-sized photo</label>
+                <input type="file" name="photo" accept="image/*" required> 
+                <label for="drama_certificate">Please upload a drama certificate</label>
+                <input type="file" name="drama_certificate" accept="application/pdf,image/*" required>
+
+                <button type="button" class="button-co" onclick="nextStep(6)">Next</button>
+                <button type="button" class="button-co" onclick="prevStep(5)">Back</button>
+            </div> -->
+
+            <!-- Step 7: Submission -->
+            <!-- <div class="step" id="step7" style="display: none;">
+                <h2>Submit Your Application Form</h2>
+                <p class="line"></p>
+                <div class="terms-container">
+                    <input type="checkbox" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="button-co">Submit</button>
+            </div>
+        </form>
+        <p id="successMessage" style="display: none;" class="successmessage">Your application is approved! 🎉</p>
+    </div>
+</section> --> 
+
+<style>
+    .logo-co{
+        padding: 30px;
+        margin: 30px;
+    }
+
+.form-container-co {
+
+max-width: 600px;
+margin: auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading-co {
+text-align: center;
+font-size: 3.5em;
+color: #4CAF50;
+margin-bottom: 5px; /* Added to adjust space between heading and line */
+}
+
+h2 {
+font-size: 2em;
+color: #333;
+margin-bottom: 5px; /* Added to adjust space between heading and line */
+}
+
+.line {
+width: 50px;
+height: 3px;
+background-color: #4CAF50;
+margin: 0 auto 20px; /* Adjusted for spacing between line and content */
+}
+
+input, select, textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.button-co {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.button-co:hover {
+background-color: #45a049;
+}
+
+#successMessage {
+text-align: center;
+font-size: 1.8em;
+color: green;
+}
+
+.terms-container {
+
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+.terms{
+    font-size: 5rem;
+}
+
+.terms-container input {
+
+margin-right: 5px;
+}
+
+</style>
+<!-- <script>
+// Variables to track the current step
+let currentStep = 1;
+
+// Function to validate Step 1
+function validateStep1() {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const dob = document.getElementById("dob").value;
+    const gender = document.getElementById("gender").value;
+    const contact = document.getElementById("contact").value;
+    const email = document.getElementById("email").value;
+    
+    if (firstName && lastName && dob && gender && contact && email) {
+        nextStep(2);
+    } else {
+        alert("Please fill out all the fields in Personal Details.");
+    }
+}
+
+// Function to validate Step 2
+function validateStep2() {
+    const permanentAddress = document.getElementById("permanentAddress").value;
+    const streetAddress = document.getElementById("streetAddress").value;
+    const pincode = document.getElementById("pincode").value;
+    const state = document.getElementById("state").value;
+    const city = document.getElementById("city").value;
+    const country = document.getElementById("country").value;
+
+    if (permanentAddress && streetAddress && pincode && state && city && country) {
+        nextStep(3);
+    } else {
+        alert("Please fill out all the fields in Address Details.");
+    }
+}
+
+// Function to validate Step 3
+function validateStep3() {
+    const previousSchool = document.getElementById("previousSchool").value;
+    const qualification = document.getElementById("qualification").value;
+    const degreeName = document.getElementById("degreeName").value;
+
+    if (previousSchool && qualification && degreeName) {
+        nextStep(4);
+    } else {
+        alert("Please fill out all the fields in Academic Details.");
+    }
+}
+
+// Function to validate Step 5
+function validateStep5() {
+    const desiredCourse = document.getElementById("desiredCourse").value;
+    const experienceLevel = document.getElementById("experienceLevel").value;
+
+    if (desiredCourse && experienceLevel) {
+        nextStep(6);
+    } else {
+        alert("Please select both the Desired Course and Experience Level.");
+    }
+}
+
+// Function to validate Step 6
+function validateStep6() {
+    const photo = document.getElementById("photo").files.length;
+    const dramaCertificate = document.getElementById("dramaCertificate").files.length;
+
+    if (photo && dramaCertificate) {
+        nextStep(7);
+    } else {
+        alert("Please upload both the photo and the signature.");
+    }
+}
+
+// Function to navigate to the next step
+function nextStep(step) {
+    document.getElementById("step" + currentStep).style.display = "none";
+    currentStep = step;
+    document.getElementById("step" + currentStep).style.display = "block";
+}
+
+// Function to navigate to the previous step
+function prevStep(step) {
+    document.getElementById("step" + currentStep).style.display = "none";
+    currentStep = step;
+    document.getElementById("step" + currentStep).style.display = "block";
+}
+
+// Submit the form on the final step
+document.getElementById("admissionForm").addEventListener("submit", function(event) {
+    const terms = document.getElementById("terms").checked;
+
+    if (!terms) {
+        alert("Please agree to the terms and conditions before submitting.");
+        event.preventDefault(); // Prevent form submission
+    } else {
+        // Show success message and hide the form
+        document.getElementById("admissionForm").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+    }
+});
+
+</script>
+
+ -->
+<script>
+    // Variables to track the current step
+let currentStep = 1;
+
+// Function to validate Step 1
+function validateStep1() {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const dob = document.getElementById("dob").value;
+    const gender = document.getElementById("gender").value;
+    const contact = document.getElementById("contact").value;
+    const email = document.getElementById("email").value;
+
+    if (firstName && lastName && dob && gender && contact && email) {
+        nextStep(2);
+    } else {
+        alert("Please fill out all the fields in Personal Details.");
+    }
+}
+
+// Function to validate Step 2
+function validateStep2() {
+    const permanentAddress = document.getElementById("permanentAddress").value;
+    const streetAddress = document.getElementById("streetAddress").value;
+    const pincode = document.getElementById("pincode").value;
+    const state = document.getElementById("state").value;
+    const city = document.getElementById("city").value;
+    const country = document.getElementById("country").value;
+
+    if (permanentAddress && streetAddress && pincode && state && city && country) {
+        nextStep(3);
+    } else {
+        alert("Please fill out all the fields in Address Details.");
+    }
+}
+
+// Function to validate Step 3
+function validateStep3() {
+    const previousSchool = document.getElementById("previousSchool").value;
+    const qualification = document.getElementById("qualification").value;
+    const degreeName = document.getElementById("degreeName").value;
+
+    if (previousSchool && qualification && degreeName) {
+        nextStep(4);
+    } else {
+        alert("Please fill out all the fields in Academic Details.");
+    }
+}
+
+// Function to validate Step 5
+function validateStep5() {
+    const desiredCourse = document.getElementById("desiredCourse").value;
+    const experienceLevel = document.getElementById("experienceLevel").value;
+
+    if (desiredCourse && experienceLevel) {
+        nextStep(6);
+    } else {
+        alert("Please select both the Desired Course and Experience Level.");
+    }
+}
+
+// Function to validate Step 6
+function validateStep6() {
+    const photo = document.getElementById("photo").files.length;
+    const dramaCertificate = document.getElementById("dramaCertificate").files.length;
+
+    if (photo && dramaCertificate) {
+        nextStep(7);
+    } else {
+        alert("Please upload both the photo and the signature.");
+    }
+}
+
+// Function to navigate to the next step
+function nextStep(step) {
+    document.getElementById("step" + currentStep).style.display = "none";
+    currentStep = step;
+    document.getElementById("step" + currentStep).style.display = "block";
+}
+
+// Function to navigate to the previous step
+function prevStep(step) {
+    document.getElementById("step" + currentStep).style.display = "none";
+    currentStep = step;
+    document.getElementById("step" + currentStep).style.display = "block";
+}
+
+// Handle the form submission
+document.getElementById("admissionForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission for custom behavior
+    const terms = document.getElementById("terms").checked;
+
+    if (!terms) {
+        alert("Please agree to the terms and conditions before submitting.");
+    } else {
+        // Simulate form submission (e.g., you could submit data to a server here)
+        document.getElementById("admissionForm").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+    }
+});
+
+</script>
+
+
+
+
+
+
+<!-- 
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+</footer> -->
+
+<!-- custom js file link  -->
+<!-- <script src="../static/js/dashscript.js"></script> -->
+
+   
+</body>
+</html>
