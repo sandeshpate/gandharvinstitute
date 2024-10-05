@@ -50,6 +50,7 @@ urlpatterns = [
     path('dashtrainer/', views.dashteacher, name="teacher"),
     path('dashupdate/', views.dashupdate, name="update"),
     path('dashhelp/', views.dashhelp, name="help"),
+      path('contact/', views.contact, name="help"),
 
     # path('homepage/',views.homepage),
     path('course-me/', views.courseme),

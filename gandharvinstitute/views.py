@@ -465,5 +465,9 @@ def dashupdate(request):
     
     # return HttpResponse("welcome to home pages")
     return render(request,"dashupdate.html")
+def contact(request):
+    
+    # return HttpResponse("welcome to home pages")
+    return render(request,"contacts.html")
 def courseme(request):
     return HttpResponse("course pate")

@@ -2805,67 +2805,148 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-danger {
     color: #fff;
-    background-color: #c00;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
+    /* background-color: #c00; */
     border-color: rgb(0, 0, 0)
 }
 
 .btn-danger:hover {
     color: #fff;
-    background-color: #a60000;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
+    /* background-color: #a60000; */
     border-color: #900
 }
 
 .btn-danger.focus,.btn-danger:focus {
     color: #fff;
-    background-color: #a60000;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
+    /* background-color: #a60000; */
     border-color: #900;
     box-shadow: 0 0 0 .2rem rgba(212,38,38,.5)
 }
 
 .btn-danger.disabled,.btn-danger:disabled {
     color: #fff;
-    background-color: #c00;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
+    /* background-color: #c00; */
     border-color: #c00
 }
 
 .btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle {
     color: #fff;
-    background-color: #900;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
+    /* background-color: #900; */
     border-color: #8c0000
 }
 
 .btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(212,38,38,.5)
+
 }
 
 .btn-light {
     color: #fff;
-    background-color: #222;
+    /* background-color: #222; */
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
     border-color: #222
 }
 
 .btn-light:hover {
     color: #fff;
-    background-color: #0f0f0f;
+    /* background-color: #0f0f0f; */
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
     border-color: #090909
 }
 
 .btn-light.focus,.btn-light:focus {
     color: #fff;
-    background-color: #0f0f0f;
+    /* background-color: #0f0f0f; */
     border-color: #090909;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
     box-shadow: 0 0 0 .2rem rgba(67,67,67,.5)
 }
 
 .btn-light.disabled,.btn-light:disabled {
     color: #fff;
-    background-color: #222;
+    /* background-color: #222; */
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
     border-color: #222
 }
 
 .btn-light:not(:disabled):not(.disabled).active,.btn-light:not(:disabled):not(.disabled):active,.show>.btn-light.dropdown-toggle {
     color: #fff;
-    background-color: #090909;
+    /* background-color: #090909; */
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+      );
     border-color: #020202
 }
 
