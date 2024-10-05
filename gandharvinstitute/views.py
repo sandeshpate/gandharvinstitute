@@ -11,6 +11,11 @@ from django.contrib.auth.models import User
 
 from myservice.models import ClassCard #this is home page of an service card section
 from myservice.models import Play #this is an homepage slider
+
+from myservice.models import Placement
+
+
+
 from aboutus.models import SlidersImage  #this is an about slider
 from aboutus.models import SliderssOne, SliderssTwo  #this is an about automatic slider
 from aboutus.models import TeamMembers   #this is an team member 
@@ -74,19 +79,20 @@ from dashboard.models import dashCourse
 
 
 
-
 def homepage(request):
     cards = ClassCard.objects.all()
     plays = Play.objects.all()
     photos = Photo.objects.all()
     features = Feature.objects.all()
     dropdown = AddCourse.objects.all()
+    placements = Placement.objects.all()
     context = {
         'cards': cards,
         'plays': plays,
         'photos': photos, 
         'features': features,
         'dropdown': dropdown,
+        'placements': placements
         
     }
 

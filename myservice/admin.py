@@ -4,6 +4,7 @@ from myservice.models import ClassCard #this is home page of an service card sec
 from myservice.models import Play  #this is an homepage slider
 from myservice.models import Photo, Feature #this is an home page of an about section
 from myservice.models import AddCourse #add dropdwon for homepage
+from myservice.models import Placement
 
 # from myservice.models import Servicecard #this is an course service section
 
@@ -65,6 +66,15 @@ admin.site.register(Play,MyplayAdmin)
 
 
 
+
+
+
+class PlacementAdmin(admin.ModelAdmin):
+    list_display = ('company_name', 'logo')  # Display company name and logo in the admin list view
+    search_fields = ('company_name',)  # Add a search box to filter by company name
+    list_filter = ('company_name',)  # Add a filter by company name on the sidebar
+
+admin.site.register(Placement,PlacementAdmin)
 
 
 

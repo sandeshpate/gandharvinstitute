@@ -64,7 +64,12 @@ class Feature(models.Model):
     
 
 
+class Placement(models.Model):
+    company_name = models.CharField(max_length=100)  # Optional field to store company names
+    logo = models.ImageField(upload_to='posters/')  # This will store the image in the 'posters/' directory
 
+    def __str__(self):
+        return self.company_name or "Placement Logo"
 
 # class Servicecard(models.Model):
 #     title = models.CharField(max_length=100)

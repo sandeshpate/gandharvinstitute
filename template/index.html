@@ -694,44 +694,49 @@
     <figure>
       <h1 class="our-partners">our placements </h1>
       <div class="logos">
+        <!-- <div class="logo_items">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+          <img src="../static/posters/chutiyahaitu.png">
+        </div> -->
         <div class="logo_items">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-          <img src="../static/posters/chutiyahaitu.png">
-        </div>
+          {% for placement in placements %}
+              <img src="{{ placement.logo.url }}" alt="{{ placement.company_name }}">
+          {% endfor %}
+      </div>
       </div>
     </figure>
 
